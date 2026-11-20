@@ -1,0 +1,697 @@
+<template>
+<style>
+#root{position:absolute;inset:0;overflow:hidden;background:#9ED8FF;}
+#virada-cam{position:absolute;left:0;top:0;width:1080px;height:1920px;}
+#root .abs{position:absolute;}
+#root .line{position:absolute;left:120px;width:768px;line-height:1.08;letter-spacing:-0.01em;}
+#root .line .in{display:block;}
+#root .w{display:inline-block;}
+#root .num{font-family:'Archivo Black';letter-spacing:-0.02em;}
+#root .g{color:#13804A;}
+#root .gold{color:#9A5B00;}
+
+#root .cal-day{left:150px;top:392px;width:420px;text-align:center;font-family:'Archivo Black';font-size:170px;line-height:1;color:#1E1A2B;}
+#root .cal-val{left:120px;top:630px;width:768px;font-size:64px;line-height:1;white-space:nowrap;}
+#root .cal-val .in{display:inline-block;background:#FFF8EC;border:8px solid #1E1A2B;border-radius:22px;padding:14px 26px 18px;transform-origin:0 50%;}
+</style>
+<div id="root" data-composition-id="virada" data-width="1080" data-height="1920">
+<div id="virada-cam">
+
+<div class="abs" data-layout-ignore style="left:0;top:1560px;width:1080px;height:360px;background:#5E8FD6;border-top:8px solid #1E1A2B"></div>
+<div id="s5-flood" class="abs" data-layout-ignore style="left:-930px;top:-500px;width:2940px;height:2940px;border-radius:50%;background:#22B26B"></div>
+<div id="s5-b0" class="abs" data-layout-ignore style="left:-40px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b1" class="abs" data-layout-ignore style="left:689px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b2" class="abs" data-layout-ignore style="left:715px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b3" class="abs" data-layout-ignore style="left:777px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b4" class="abs" data-layout-ignore style="left:658px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b5" class="abs" data-layout-ignore style="left:882px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b6" class="abs" data-layout-ignore style="left:883px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b7" class="abs" data-layout-ignore style="left:872px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b8" class="abs" data-layout-ignore style="left:797px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b9" class="abs" data-layout-ignore style="left:388px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b10" class="abs" data-layout-ignore style="left:689px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b11" class="abs" data-layout-ignore style="left:521px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b12" class="abs" data-layout-ignore style="left:869px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b13" class="abs" data-layout-ignore style="left:624px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b14" class="abs" data-layout-ignore style="left:366px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b15" class="abs" data-layout-ignore style="left:293px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b16" class="abs" data-layout-ignore style="left:866px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b17" class="abs" data-layout-ignore style="left:594px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b18" class="abs" data-layout-ignore style="left:900px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b19" class="abs" data-layout-ignore style="left:547px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b20" class="abs" data-layout-ignore style="left:755px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b21" class="abs" data-layout-ignore style="left:38px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b22" class="abs" data-layout-ignore style="left:956px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b23" class="abs" data-layout-ignore style="left:417px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b24" class="abs" data-layout-ignore style="left:845px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b25" class="abs" data-layout-ignore style="left:721px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b26" class="abs" data-layout-ignore style="left:36px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b27" class="abs" data-layout-ignore style="left:701px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b28" class="abs" data-layout-ignore style="left:842px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b29" class="abs" data-layout-ignore style="left:78px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b30" class="abs" data-layout-ignore style="left:597px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b31" class="abs" data-layout-ignore style="left:148px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b32" class="abs" data-layout-ignore style="left:226px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b33" class="abs" data-layout-ignore style="left:12px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b34" class="abs" data-layout-ignore style="left:458px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b35" class="abs" data-layout-ignore style="left:91px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b36" class="abs" data-layout-ignore style="left:843px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b37" class="abs" data-layout-ignore style="left:725px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b38" class="abs" data-layout-ignore style="left:842px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b39" class="abs" data-layout-ignore style="left:847px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b40" class="abs" data-layout-ignore style="left:695px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b41" class="abs" data-layout-ignore style="left:159px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b42" class="abs" data-layout-ignore style="left:592px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b43" class="abs" data-layout-ignore style="left:605px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b44" class="abs" data-layout-ignore style="left:731px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b45" class="abs" data-layout-ignore style="left:407px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b46" class="abs" data-layout-ignore style="left:522px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b47" class="abs" data-layout-ignore style="left:711px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b48" class="abs" data-layout-ignore style="left:163px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b49" class="abs" data-layout-ignore style="left:620px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b50" class="abs" data-layout-ignore style="left:783px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b51" class="abs" data-layout-ignore style="left:919px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b52" class="abs" data-layout-ignore style="left:684px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b53" class="abs" data-layout-ignore style="left:40px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b54" class="abs" data-layout-ignore style="left:565px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b55" class="abs" data-layout-ignore style="left:162px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b56" class="abs" data-layout-ignore style="left:954px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b57" class="abs" data-layout-ignore style="left:357px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b58" class="abs" data-layout-ignore style="left:768px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b59" class="abs" data-layout-ignore style="left:469px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b60" class="abs" data-layout-ignore style="left:131px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b61" class="abs" data-layout-ignore style="left:516px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b62" class="abs" data-layout-ignore style="left:373px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b63" class="abs" data-layout-ignore style="left:373px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b64" class="abs" data-layout-ignore style="left:737px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b65" class="abs" data-layout-ignore style="left:922px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b66" class="abs" data-layout-ignore style="left:308px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b67" class="abs" data-layout-ignore style="left:527px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b68" class="abs" data-layout-ignore style="left:689px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b69" class="abs" data-layout-ignore style="left:398px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b70" class="abs" data-layout-ignore style="left:318px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b71" class="abs" data-layout-ignore style="left:668px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b72" class="abs" data-layout-ignore style="left:167px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b73" class="abs" data-layout-ignore style="left:876px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b74" class="abs" data-layout-ignore style="left:496px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b75" class="abs" data-layout-ignore style="left:834px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b76" class="abs" data-layout-ignore style="left:355px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b77" class="abs" data-layout-ignore style="left:859px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b78" class="abs" data-layout-ignore style="left:837px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b79" class="abs" data-layout-ignore style="left:-39px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b80" class="abs" data-layout-ignore style="left:653px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b81" class="abs" data-layout-ignore style="left:907px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b82" class="abs" data-layout-ignore style="left:587px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b83" class="abs" data-layout-ignore style="left:711px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b84" class="abs" data-layout-ignore style="left:915px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b85" class="abs" data-layout-ignore style="left:662px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b86" class="abs" data-layout-ignore style="left:5px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b87" class="abs" data-layout-ignore style="left:211px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b88" class="abs" data-layout-ignore style="left:773px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b89" class="abs" data-layout-ignore style="left:651px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b90" class="abs" data-layout-ignore style="left:765px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div><div id="s5-b91" class="abs" data-layout-ignore style="left:783px;top:-200px;width:160px;height:90px"><svg viewBox="-80 -45 160 90" width="100%" height="100%" overflow="visible"><g  transform="translate(0 0) rotate(0) scale(1)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div>
+
+<div class="abs" style="left:150px;top:300px;width:420px;height:300px;background:#FFF8EC;border:8px solid #1E1A2B;border-radius:18px;overflow:hidden" data-layout-ignore>
+  <div class="abs" style="left:0;top:0;width:100%;height:78px;background:#E63946;border-bottom:8px solid #1E1A2B"></div>
+  <div class="abs num" style="left:0;top:8px;width:100%;text-align:center;font-size:46px;color:#fff">DIA</div>
+  <div id="s5-flip" class="abs" style="left:0;top:86px;width:100%;height:214px;background:#F1E6D2"></div>
+</div>
+<div class="abs" data-layout-ignore style="left:220px;top:278px;width:24px;height:52px;border-radius:12px;background:#C9C3D6;border:6px solid #1E1A2B"></div>
+<div class="abs" data-layout-ignore style="left:476px;top:278px;width:24px;height:52px;border-radius:12px;background:#C9C3D6;border:6px solid #1E1A2B"></div>
+<div id="s5-d26" class="clip abs cal-day" data-start="0" data-duration="1.6" data-track-index="2"><div class="in">26</div></div><div id="s5-v26" class="clip abs cal-val" data-start="0" data-duration="1.6" data-track-index="2"><div class="in num g">R$ 335.544,32</div></div><div id="s5-d27" class="clip abs cal-day" data-start="1.6" data-duration="1.4" data-track-index="2"><div class="in">27</div></div><div id="s5-v27" class="clip abs cal-val" data-start="1.6" data-duration="1.4" data-track-index="2"><div class="in num g">R$ 671.088,64</div></div><div id="s5-d28" class="clip abs cal-day" data-start="3" data-duration="3.3" data-track-index="2"><div class="in">28</div></div><div id="s5-v28" class="clip abs cal-val" data-start="3" data-duration="3.3" data-track-index="2"><div class="in num g">R$ 1.342.177,28</div></div><div id="s5-d29" class="clip abs cal-day" data-start="6.3" data-duration="2.3" data-track-index="2"><div class="in">29</div></div><div id="s5-v29" class="clip abs cal-val" data-start="6.3" data-duration="2.3" data-track-index="2"><div class="in num g">R$ 2.684.354,56</div></div><div id="s5-d30" class="clip abs cal-day" data-start="8.6" data-duration="5.4" data-track-index="2"><div class="in">30</div></div><div id="s5-v30" class="clip abs cal-val" data-start="8.6" data-duration="5.4" data-track-index="2"><div class="in num g">R$ 5.368.709,12</div></div>
+<div id="s5-pile" class="abs" data-layout-ignore style="left:0;top:1340px;width:1080px;height:600px"><svg viewBox="0 0 1080 600" width="100%" height="100%" overflow="visible"><path d="M-40 600 Q120 140 540 90 Q960 140 1120 600 Z" fill="#178A50" stroke="#1E1A2B" stroke-width="8"/><g  transform="translate(90 42) rotate(7) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(240 68) rotate(12) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(390 94) rotate(11) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(540 120) rotate(-9) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(690 94) rotate(7) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(840 68) rotate(-10) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(990 42) rotate(-11) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(160 112) rotate(13) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(310 138) rotate(14) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(460 164) rotate(-13) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(610 190) rotate(-13) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(760 164) rotate(-7) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(910 138) rotate(13) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(1060 112) rotate(11) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(90 260) rotate(14) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(240 260) rotate(-7) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(390 260) rotate(-9) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(540 260) rotate(-14) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(690 260) rotate(-1) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(840 260) rotate(2) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(990 260) rotate(-11) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(160 330) rotate(-5) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(310 330) rotate(-1) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(460 330) rotate(-8) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(610 330) rotate(-13) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(760 330) rotate(-14) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(910 330) rotate(-12) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(1060 330) rotate(4) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(90 400) rotate(-1) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(240 400) rotate(9) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(390 400) rotate(7) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(540 400) rotate(0) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(690 400) rotate(6) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g><g  transform="translate(840 400) rotate(-3) scale(1.15)">
+  <rect x="-70" y="-36" width="140" height="72" rx="8" fill="#22B26B" stroke="#1E1A2B" stroke-width="6"/>
+  <rect x="-58" y="-25" width="116" height="50" rx="5" fill="none" stroke="#178A50" stroke-width="4"/>
+  <circle cx="0" cy="0" r="17" fill="#8FE0B5" stroke="#178A50" stroke-width="4"/>
+  <text x="0" y="8" font-family="Archivo Black" font-size="20" text-anchor="middle" fill="#178A50">R$</text></g></svg></div>
+<div id="s5-leo" class="abs" data-layout-ignore style="left:270px;top:1100px;width:520px;height:832px;"><svg viewBox="0 0 400 640" width="100%" height="100%" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="s5leo-boil" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence id="s5leo-turb" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1"/>
+    <feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <ellipse cx="200" cy="626" rx="120" ry="14" fill="rgba(30,26,43,.18)"/>
+  <g id="s5leo-all" filter="url(#s5leo-boil)">
+    <g id="s5leo-legL"><rect x="160" y="470" width="32" height="130" rx="14" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/><ellipse cx="170" cy="606" rx="32" ry="16" fill="#1E1A2B"/></g>
+    <g id="s5leo-legR"><rect x="208" y="470" width="32" height="130" rx="14" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/><ellipse cx="230" cy="606" rx="32" ry="16" fill="#1E1A2B"/></g>
+    <g id="s5leo-torso">
+      <g id="s5leo-armL">
+    <line x1="148" y1="338" x2="102" y2="448" stroke="#1E1A2B" stroke-width="46" stroke-linecap="round"/>
+    <line x1="148" y1="338" x2="102" y2="448" stroke="#FFD0A6" stroke-width="30" stroke-linecap="round"/>
+    <line x1="148" y1="338" x2="127.30000000000001" y2="387.5" stroke="#FF6B35" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="102" cy="456" r="21" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+    
+  </g>
+      <path d="M140 320 Q200 292 260 320 L270 452 Q200 470 130 452 Z" fill="#FF6B35" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+       <path d="M150 440 H250 V500 H208 V478 H192 V500 H150 Z" fill="#2C3E8C" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+      <g id="s5leo-head">
+        <circle cx="86" cy="196" r="22" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+        <circle cx="314" cy="196" r="22" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+        
+        <circle cx="200" cy="186" r="116" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+        <path d="M92 165 Q104 62 200 58 Q300 60 308 160 Q280 118 246 126 Q252 96 214 104 Q198 80 168 108 Q136 98 128 134 Q106 134 92 165 Z" fill="#5A3A22" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+        <circle cx="140" cy="232" r="16" fill="#FF8FA3" opacity=".45"/><circle cx="260" cy="232" r="16" fill="#FF8FA3" opacity=".45"/>
+        <g id="s5leo-eyes">
+          <ellipse cx="160" cy="192" rx="24" ry="28" fill="#fff" stroke="#1E1A2B" stroke-width="6"/>
+          <ellipse cx="240" cy="192" rx="24" ry="28" fill="#fff" stroke="#1E1A2B" stroke-width="6"/>
+          <g id="s5leo-pupils"><circle cx="164" cy="198" r="11" fill="#1E1A2B"/><circle cx="244" cy="198" r="11" fill="#1E1A2B"/>
+            <circle cx="168" cy="193" r="4" fill="#fff"/><circle cx="248" cy="193" r="4" fill="#fff"/></g>
+        </g>
+        
+        <g id="s5leo-brows" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round" fill="none">
+          <path id="s5leo-browL" d="M138 150 Q160 140 182 150"/><path id="s5leo-browR" d="M218 150 Q240 140 262 150"/></g>
+        <path d="M194 214 Q200 224 208 214" fill="none" stroke="#1E1A2B" stroke-width="6" stroke-linecap="round"/>
+        
+        <g id="s5leo-m-smile" opacity="1"><path d="M168 246 Q200 278 232 246" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g><g id="s5leo-m-grin" opacity="0"><path d="M162 238 Q200 300 238 238 Z" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/><path d="M172 244 Q200 252 228 244" fill="none" stroke="#fff" stroke-width="7"/></g><g id="s5leo-m-open" opacity="0"><ellipse cx="200" cy="256" rx="20" ry="24" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="8"/></g><g id="s5leo-m-sad" opacity="0"><path d="M170 266 Q200 240 230 266" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g><g id="s5leo-m-worried" opacity="0"><path d="M168 260 q8 -9 16 0 t16 0 t16 0 t16 0" fill="none" stroke="#1E1A2B" stroke-width="7" stroke-linecap="round"/></g><g id="s5leo-m-o" opacity="0"><ellipse cx="200" cy="258" rx="13" ry="17" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="7"/></g><g id="s5leo-m-smug" opacity="0"><path d="M172 252 Q205 270 234 240" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g>
+        <path id="s5leo-sweat" opacity="0" d="M316 110 Q330 140 316 150 Q302 140 316 110 Z" fill="#7CC8FF" stroke="#1E1A2B" stroke-width="5"/>
+      </g>
+      <g id="s5leo-armR">
+    <line x1="252" y1="338" x2="298" y2="448" stroke="#1E1A2B" stroke-width="46" stroke-linecap="round"/>
+    <line x1="252" y1="338" x2="298" y2="448" stroke="#FFD0A6" stroke-width="30" stroke-linecap="round"/>
+    <line x1="252" y1="338" x2="272.70000000000005" y2="387.5" stroke="#FF6B35" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="298" cy="456" r="21" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+    
+  </g>
+    </g>
+  </g>
+</svg></div>
+<div id="s5-bia" class="abs" data-layout-ignore style="left:660px;top:1330px;width:340px;height:544px"><svg viewBox="0 0 400 640" width="100%" height="100%" overflow="visible" xmlns="http://www.w3.org/2000/svg">
+  <defs><filter id="s5bia-boil" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence id="s5bia-turb" type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1"/>
+    <feDisplacementMap in="SourceGraphic" scale="5"/></filter></defs>
+  <ellipse cx="200" cy="626" rx="120" ry="14" fill="rgba(30,26,43,.18)"/>
+  <g id="s5bia-all" filter="url(#s5bia-boil)">
+    <g id="s5bia-legL"><rect x="160" y="470" width="32" height="130" rx="14" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/><ellipse cx="170" cy="606" rx="32" ry="16" fill="#1E1A2B"/></g>
+    <g id="s5bia-legR"><rect x="208" y="470" width="32" height="130" rx="14" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/><ellipse cx="230" cy="606" rx="32" ry="16" fill="#1E1A2B"/></g>
+    <g id="s5bia-torso">
+      <g id="s5bia-armL">
+    <line x1="148" y1="338" x2="102" y2="448" stroke="#1E1A2B" stroke-width="46" stroke-linecap="round"/>
+    <line x1="148" y1="338" x2="102" y2="448" stroke="#FFD0A6" stroke-width="30" stroke-linecap="round"/>
+    <line x1="148" y1="338" x2="127.30000000000001" y2="387.5" stroke="#3D7EFF" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="102" cy="456" r="21" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+    
+  </g>
+      <path d="M140 320 Q200 296 260 320 L292 492 Q200 516 108 492 Z" fill="#3D7EFF" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+      <g id="s5bia-head">
+        <circle cx="86" cy="196" r="22" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+        <circle cx="314" cy="196" r="22" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+        <circle cx="70" cy="150" r="42" fill="#2B1B12" stroke="#1E1A2B" stroke-width="8"/>
+      <circle cx="330" cy="150" r="42" fill="#2B1B12" stroke="#1E1A2B" stroke-width="8"/>
+      <circle cx="98" cy="160" r="12" fill="#E63946" stroke="#1E1A2B" stroke-width="5"/>
+      <circle cx="302" cy="160" r="12" fill="#E63946" stroke="#1E1A2B" stroke-width="5"/>
+      <path d="M88 170 Q96 60 200 56 Q306 60 312 170 Q290 120 200 118 Q118 118 88 170 Z" fill="#2B1B12" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+        <circle cx="200" cy="186" r="116" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+              <path d="M88 170 Q96 60 200 56 Q306 60 312 170 Q290 120 200 118 Q118 118 88 170 Z" fill="#2B1B12" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/>
+        <circle cx="140" cy="232" r="16" fill="#FF8FA3" opacity=".45"/><circle cx="260" cy="232" r="16" fill="#FF8FA3" opacity=".45"/>
+        <g id="s5bia-eyes">
+          <ellipse cx="160" cy="192" rx="24" ry="28" fill="#fff" stroke="#1E1A2B" stroke-width="6"/>
+          <ellipse cx="240" cy="192" rx="24" ry="28" fill="#fff" stroke="#1E1A2B" stroke-width="6"/>
+          <g id="s5bia-pupils"><circle cx="164" cy="198" r="11" fill="#1E1A2B"/><circle cx="244" cy="198" r="11" fill="#1E1A2B"/>
+            <circle cx="168" cy="193" r="4" fill="#fff"/><circle cx="248" cy="193" r="4" fill="#fff"/></g>
+        </g>
+        
+        <g id="s5bia-brows" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round" fill="none">
+          <path id="s5bia-browL" d="M138 150 Q160 140 182 150"/><path id="s5bia-browR" d="M218 150 Q240 140 262 150"/></g>
+        <path d="M194 214 Q200 224 208 214" fill="none" stroke="#1E1A2B" stroke-width="6" stroke-linecap="round"/>
+        
+        <g id="s5bia-m-smile" opacity="1"><path d="M168 246 Q200 278 232 246" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g><g id="s5bia-m-grin" opacity="0"><path d="M162 238 Q200 300 238 238 Z" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="8" stroke-linejoin="round"/><path d="M172 244 Q200 252 228 244" fill="none" stroke="#fff" stroke-width="7"/></g><g id="s5bia-m-open" opacity="0"><ellipse cx="200" cy="256" rx="20" ry="24" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="8"/></g><g id="s5bia-m-sad" opacity="0"><path d="M170 266 Q200 240 230 266" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g><g id="s5bia-m-worried" opacity="0"><path d="M168 260 q8 -9 16 0 t16 0 t16 0 t16 0" fill="none" stroke="#1E1A2B" stroke-width="7" stroke-linecap="round"/></g><g id="s5bia-m-o" opacity="0"><ellipse cx="200" cy="258" rx="13" ry="17" fill="#7A1F2B" stroke="#1E1A2B" stroke-width="7"/></g><g id="s5bia-m-smug" opacity="0"><path d="M172 252 Q205 270 234 240" fill="none" stroke="#1E1A2B" stroke-width="8" stroke-linecap="round"/></g>
+        <path id="s5bia-sweat" opacity="0" d="M316 110 Q330 140 316 150 Q302 140 316 110 Z" fill="#7CC8FF" stroke="#1E1A2B" stroke-width="5"/>
+      </g>
+      <g id="s5bia-armR">
+    <line x1="252" y1="338" x2="298" y2="448" stroke="#1E1A2B" stroke-width="46" stroke-linecap="round"/>
+    <line x1="252" y1="338" x2="298" y2="448" stroke="#FFD0A6" stroke-width="30" stroke-linecap="round"/>
+    <line x1="252" y1="338" x2="272.70000000000005" y2="387.5" stroke="#3D7EFF" stroke-width="40" stroke-linecap="round"/>
+    <circle cx="298" cy="456" r="21" fill="#FFD0A6" stroke="#1E1A2B" stroke-width="8"/>
+    
+  </g>
+    </g>
+  </g>
+</svg></div>
+<div id="s5-l1" class="clip line" data-start="0.3" data-duration="1.3" data-track-index="3"
+    style="top:800px;width:660px;font-family:'Nunito';font-weight:900;font-size:72px;color:#1E1A2B">
+    <div class="in"><span class="w">Mas</span> <span class="w">aí…</span></div></div><div id="s5-l2" class="clip line" data-start="3.3" data-duration="3" data-track-index="3"
+    style="top:800px;width:660px;font-family:'Nunito';font-weight:900;font-size:72px;color:#1E1A2B">
+    <div class="in"><span class="w">Passou</span> <span class="w">do</span> <span class="w">milhão.</span></div></div><div id="s5-l3" class="clip line" data-hold data-start="9" data-duration="5" data-track-index="3"
+    style="top:800px;width:660px;font-family:'Nunito';font-weight:900;font-size:84px;color:#1E1A2B">
+    <div class="in"><span class="num" style="color:#fff;-webkit-text-stroke:4px #1E1A2B">5 MILHÕES.</span></div></div>
+</div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#s5leo-torso",{scaleY:1},{scaleY:1.018,svgOrigin:"200 470",duration:1.3,ease:"sine.inOut",yoyo:true,repeat:10},0);
+tl.fromTo("#s5leo-turb",{attr:{seed:1}},{attr:{seed:169},duration:14,ease:"steps(168)"},0);
+tl.fromTo("#s5bia-torso",{scaleY:1},{scaleY:1.018,svgOrigin:"200 470",duration:1.3,ease:"sine.inOut",yoyo:true,repeat:10},0);
+tl.fromTo("#s5bia-turb",{attr:{seed:1}},{attr:{seed:169},duration:14,ease:"steps(168)"},0);
+tl.fromTo("#s5-d26 .in",{y:-30,opacity:.2},{y:0,opacity:1,duration:.12,ease:"power3.out"},0);tl.fromTo("#s5-v26 .in",{scale:1.12},{scale:1,duration:.18,ease:"power3.out"},0);tl.fromTo("#s5-flip",{scaleY:1,opacity:1},{scaleY:0,opacity:.4,duration:.14,ease:"power2.in",transformOrigin:"50% 0%"},0);
+tl.fromTo("#s5-d27 .in",{y:-30,opacity:.2},{y:0,opacity:1,duration:.12,ease:"power3.out"},1.6);tl.fromTo("#s5-v27 .in",{scale:1.12},{scale:1,duration:.18,ease:"power3.out"},1.6);tl.fromTo("#s5-flip",{scaleY:1,opacity:1},{scaleY:0,opacity:.4,duration:.14,ease:"power2.in",transformOrigin:"50% 0%"},1.6);
+tl.fromTo("#s5-d28 .in",{y:-30,opacity:.2},{y:0,opacity:1,duration:.12,ease:"power3.out"},3);tl.fromTo("#s5-v28 .in",{scale:1.12},{scale:1,duration:.18,ease:"power3.out"},3);tl.fromTo("#s5-flip",{scaleY:1,opacity:1},{scaleY:0,opacity:.4,duration:.14,ease:"power2.in",transformOrigin:"50% 0%"},3);
+tl.fromTo("#s5-d29 .in",{y:-30,opacity:.2},{y:0,opacity:1,duration:.12,ease:"power3.out"},6.3);tl.fromTo("#s5-v29 .in",{scale:1.12},{scale:1,duration:.18,ease:"power3.out"},6.3);tl.fromTo("#s5-flip",{scaleY:1,opacity:1},{scaleY:0,opacity:.4,duration:.14,ease:"power2.in",transformOrigin:"50% 0%"},6.3);
+tl.fromTo("#s5-d30 .in",{y:-30,opacity:.2},{y:0,opacity:1,duration:.12,ease:"power3.out"},8.6);tl.fromTo("#s5-v30 .in",{scale:1.12},{scale:1,duration:.18,ease:"power3.out"},8.6);tl.fromTo("#s5-flip",{scaleY:1,opacity:1},{scaleY:0,opacity:.4,duration:.14,ease:"power2.in",transformOrigin:"50% 0%"},8.6);
+tl.fromTo("#s5-b0",{y:0,rotation:-17},{y:2300,rotation:-104,duration:3.2,ease:"power1.in"},3.07);tl.fromTo("#s5-b1",{y:0,rotation:-14},{y:2300,rotation:91,duration:3.2,ease:"power1.in"},2.45);tl.fromTo("#s5-b2",{y:0,rotation:15},{y:2300,rotation:49,duration:3.2,ease:"power1.in"},2.47);tl.fromTo("#s5-b3",{y:0,rotation:-10},{y:2300,rotation:75,duration:3.2,ease:"power1.in"},1.99);tl.fromTo("#s5-b4",{y:0,rotation:15},{y:2300,rotation:-12,duration:3.2,ease:"power1.in"},1.69);tl.fromTo("#s5-b5",{y:0,rotation:-30},{y:2300,rotation:5,duration:3.2,ease:"power1.in"},2.89);tl.fromTo("#s5-b6",{y:0,rotation:12},{y:2300,rotation:28,duration:2.6,ease:"power1.in"},4.1);tl.fromTo("#s5-b7",{y:0,rotation:-10},{y:2300,rotation:-59,duration:2.6,ease:"power1.in"},4.45);tl.fromTo("#s5-b8",{y:0,rotation:-28},{y:2300,rotation:-73,duration:2.6,ease:"power1.in"},3.53);tl.fromTo("#s5-b9",{y:0,rotation:35},{y:2300,rotation:21,duration:2.6,ease:"power1.in"},3.47);tl.fromTo("#s5-b10",{y:0,rotation:-35},{y:2300,rotation:-82,duration:2.6,ease:"power1.in"},4.4);tl.fromTo("#s5-b11",{y:0,rotation:-6},{y:2300,rotation:-111,duration:2.6,ease:"power1.in"},3.81);tl.fromTo("#s5-b12",{y:0,rotation:-11},{y:2300,rotation:-56,duration:2.6,ease:"power1.in"},3.09);tl.fromTo("#s5-b13",{y:0,rotation:1},{y:2300,rotation:-120,duration:2.6,ease:"power1.in"},4.48);tl.fromTo("#s5-b14",{y:0,rotation:-11},{y:2300,rotation:-27,duration:2.6,ease:"power1.in"},3.45);tl.fromTo("#s5-b15",{y:0,rotation:9},{y:2300,rotation:-96,duration:2.6,ease:"power1.in"},3.85);tl.fromTo("#s5-b16",{y:0,rotation:29},{y:2300,rotation:49,duration:2.6,ease:"power1.in"},3.73);tl.fromTo("#s5-b17",{y:0,rotation:0},{y:2300,rotation:68,duration:2.6,ease:"power1.in"},3.83);tl.fromTo("#s5-b18",{y:0,rotation:17},{y:2300,rotation:-90,duration:2.6,ease:"power1.in"},3.63);tl.fromTo("#s5-b19",{y:0,rotation:-14},{y:2300,rotation:-39,duration:2.6,ease:"power1.in"},3.56);tl.fromTo("#s5-b20",{y:0,rotation:-31},{y:2300,rotation:115,duration:2.2,ease:"power1.in"},7.7);tl.fromTo("#s5-b21",{y:0,rotation:-28},{y:2300,rotation:-152,duration:2.2,ease:"power1.in"},6.95);tl.fromTo("#s5-b22",{y:0,rotation:11},{y:2300,rotation:-128,duration:2.2,ease:"power1.in"},6.65);tl.fromTo("#s5-b23",{y:0,rotation:-29},{y:2300,rotation:152,duration:2.2,ease:"power1.in"},7.25);tl.fromTo("#s5-b24",{y:0,rotation:31},{y:2300,rotation:147,duration:2.2,ease:"power1.in"},7.72);tl.fromTo("#s5-b25",{y:0,rotation:-39},{y:2300,rotation:-91,duration:2.2,ease:"power1.in"},6.74);tl.fromTo("#s5-b26",{y:0,rotation:9},{y:2300,rotation:-97,duration:2.2,ease:"power1.in"},6.3);tl.fromTo("#s5-b27",{y:0,rotation:15},{y:2300,rotation:-94,duration:2.2,ease:"power1.in"},7.08);tl.fromTo("#s5-b28",{y:0,rotation:-10},{y:2300,rotation:142,duration:2.2,ease:"power1.in"},6.68);tl.fromTo("#s5-b29",{y:0,rotation:-40},{y:2300,rotation:149,duration:2.2,ease:"power1.in"},7.08);tl.fromTo("#s5-b30",{y:0,rotation:-38},{y:2300,rotation:144,duration:2.2,ease:"power1.in"},7.78);tl.fromTo("#s5-b31",{y:0,rotation:5},{y:2300,rotation:65,duration:2.2,ease:"power1.in"},7.85);tl.fromTo("#s5-b32",{y:0,rotation:-23},{y:2300,rotation:23,duration:2.2,ease:"power1.in"},6.66);tl.fromTo("#s5-b33",{y:0,rotation:16},{y:2300,rotation:77,duration:2.2,ease:"power1.in"},7.53);tl.fromTo("#s5-b34",{y:0,rotation:-31},{y:2300,rotation:151,duration:2.2,ease:"power1.in"},6.35);tl.fromTo("#s5-b35",{y:0,rotation:31},{y:2300,rotation:-167,duration:2.2,ease:"power1.in"},7.4);tl.fromTo("#s5-b36",{y:0,rotation:39},{y:2300,rotation:164,duration:2.2,ease:"power1.in"},7.68);tl.fromTo("#s5-b37",{y:0,rotation:-20},{y:2300,rotation:82,duration:2.2,ease:"power1.in"},6.97);tl.fromTo("#s5-b38",{y:0,rotation:-21},{y:2300,rotation:-34,duration:1.8,ease:"power1.in"},9.24);tl.fromTo("#s5-b39",{y:0,rotation:-12},{y:2300,rotation:44,duration:1.8,ease:"power1.in"},9.49);tl.fromTo("#s5-b40",{y:0,rotation:18},{y:2300,rotation:-28,duration:1.8,ease:"power1.in"},9.14);tl.fromTo("#s5-b41",{y:0,rotation:39},{y:2300,rotation:178,duration:1.8,ease:"power1.in"},9.1);tl.fromTo("#s5-b42",{y:0,rotation:33},{y:2300,rotation:-108,duration:1.8,ease:"power1.in"},10);tl.fromTo("#s5-b43",{y:0,rotation:0},{y:2300,rotation:21,duration:1.8,ease:"power1.in"},8.82);tl.fromTo("#s5-b44",{y:0,rotation:-1},{y:2300,rotation:-113,duration:1.8,ease:"power1.in"},10.11);tl.fromTo("#s5-b45",{y:0,rotation:13},{y:2300,rotation:8,duration:1.8,ease:"power1.in"},8.87);tl.fromTo("#s5-b46",{y:0,rotation:21},{y:2300,rotation:-50,duration:1.8,ease:"power1.in"},9.41);tl.fromTo("#s5-b47",{y:0,rotation:-16},{y:2300,rotation:15,duration:1.8,ease:"power1.in"},8.64);tl.fromTo("#s5-b48",{y:0,rotation:-17},{y:2300,rotation:-95,duration:1.8,ease:"power1.in"},9.76);tl.fromTo("#s5-b49",{y:0,rotation:-34},{y:2300,rotation:98,duration:1.8,ease:"power1.in"},9.29);tl.fromTo("#s5-b50",{y:0,rotation:33},{y:2300,rotation:65,duration:1.8,ease:"power1.in"},10.06);tl.fromTo("#s5-b51",{y:0,rotation:21},{y:2300,rotation:36,duration:1.8,ease:"power1.in"},8.64);tl.fromTo("#s5-b52",{y:0,rotation:-37},{y:2300,rotation:-131,duration:1.8,ease:"power1.in"},10.04);tl.fromTo("#s5-b53",{y:0,rotation:-33},{y:2300,rotation:-177,duration:1.8,ease:"power1.in"},8.77);tl.fromTo("#s5-b54",{y:0,rotation:-25},{y:2300,rotation:-132,duration:1.8,ease:"power1.in"},10.11);tl.fromTo("#s5-b55",{y:0,rotation:-21},{y:2300,rotation:-16,duration:1.8,ease:"power1.in"},9.68);tl.fromTo("#s5-b56",{y:0,rotation:14},{y:2300,rotation:99,duration:1.8,ease:"power1.in"},9.28);tl.fromTo("#s5-b57",{y:0,rotation:-35},{y:2300,rotation:-97,duration:1.8,ease:"power1.in"},9.27);tl.fromTo("#s5-b58",{y:0,rotation:-28},{y:2300,rotation:153,duration:1.8,ease:"power1.in"},10.16);tl.fromTo("#s5-b59",{y:0,rotation:-23},{y:2300,rotation:37,duration:1.8,ease:"power1.in"},8.8);tl.fromTo("#s5-b60",{y:0,rotation:-18},{y:2300,rotation:53,duration:1.8,ease:"power1.in"},8.72);tl.fromTo("#s5-b61",{y:0,rotation:40},{y:2300,rotation:-153,duration:1.8,ease:"power1.in"},9.37);tl.fromTo("#s5-b62",{y:0,rotation:-40},{y:2300,rotation:-178,duration:1.8,ease:"power1.in"},9.1);tl.fromTo("#s5-b63",{y:0,rotation:-21},{y:2300,rotation:153,duration:1.8,ease:"power1.in"},8.75);tl.fromTo("#s5-b64",{y:0,rotation:-5},{y:2300,rotation:128,duration:2.4,ease:"power1.in"},11.82);tl.fromTo("#s5-b65",{y:0,rotation:13},{y:2300,rotation:26,duration:2.4,ease:"power1.in"},11.88);tl.fromTo("#s5-b66",{y:0,rotation:0},{y:2300,rotation:-2,duration:2.4,ease:"power1.in"},11.25);tl.fromTo("#s5-b67",{y:0,rotation:13},{y:2300,rotation:48,duration:2.4,ease:"power1.in"},11.75);tl.fromTo("#s5-b68",{y:0,rotation:28},{y:2300,rotation:176,duration:2.4,ease:"power1.in"},12.02);tl.fromTo("#s5-b69",{y:0,rotation:37},{y:2300,rotation:171,duration:2.4,ease:"power1.in"},11.38);tl.fromTo("#s5-b70",{y:0,rotation:-13},{y:2300,rotation:138,duration:2.4,ease:"power1.in"},10.73);tl.fromTo("#s5-b71",{y:0,rotation:36},{y:2300,rotation:103,duration:2.4,ease:"power1.in"},11.78);tl.fromTo("#s5-b72",{y:0,rotation:24},{y:2300,rotation:-143,duration:2.4,ease:"power1.in"},10.98);tl.fromTo("#s5-b73",{y:0,rotation:11},{y:2300,rotation:76,duration:2.4,ease:"power1.in"},11.88);tl.fromTo("#s5-b74",{y:0,rotation:30},{y:2300,rotation:23,duration:2.4,ease:"power1.in"},11.31);tl.fromTo("#s5-b75",{y:0,rotation:15},{y:2300,rotation:-24,duration:2.4,ease:"power1.in"},11.03);tl.fromTo("#s5-b76",{y:0,rotation:7},{y:2300,rotation:-97,duration:2.4,ease:"power1.in"},10.9);tl.fromTo("#s5-b77",{y:0,rotation:-13},{y:2300,rotation:66,duration:2.4,ease:"power1.in"},11.92);tl.fromTo("#s5-b78",{y:0,rotation:-15},{y:2300,rotation:152,duration:2.4,ease:"power1.in"},10.79);tl.fromTo("#s5-b79",{y:0,rotation:-8},{y:2300,rotation:-172,duration:2.4,ease:"power1.in"},10.81);tl.fromTo("#s5-b80",{y:0,rotation:-26},{y:2300,rotation:-104,duration:2,ease:"power1.in"},13.64);tl.fromTo("#s5-b81",{y:0,rotation:-26},{y:2300,rotation:-138,duration:2,ease:"power1.in"},13.32);tl.fromTo("#s5-b82",{y:0,rotation:25},{y:2300,rotation:33,duration:2,ease:"power1.in"},12.23);tl.fromTo("#s5-b83",{y:0,rotation:-13},{y:2300,rotation:77,duration:2,ease:"power1.in"},12.4);tl.fromTo("#s5-b84",{y:0,rotation:7},{y:2300,rotation:100,duration:2,ease:"power1.in"},13.08);tl.fromTo("#s5-b85",{y:0,rotation:8},{y:2300,rotation:-144,duration:2,ease:"power1.in"},13.37);tl.fromTo("#s5-b86",{y:0,rotation:-22},{y:2300,rotation:29,duration:2,ease:"power1.in"},13.18);tl.fromTo("#s5-b87",{y:0,rotation:10},{y:2300,rotation:47,duration:2,ease:"power1.in"},12.56);tl.fromTo("#s5-b88",{y:0,rotation:32},{y:2300,rotation:-161,duration:2,ease:"power1.in"},12.58);tl.fromTo("#s5-b89",{y:0,rotation:23},{y:2300,rotation:57,duration:2,ease:"power1.in"},12.85);tl.fromTo("#s5-b90",{y:0,rotation:34},{y:2300,rotation:0,duration:2,ease:"power1.in"},12.37);tl.fromTo("#s5-b91",{y:0,rotation:29},{y:2300,rotation:105,duration:2,ease:"power1.in"},12.88);
+gsap.set("#s5leo-armR",{rotation:20,svgOrigin:"252 338"});
+gsap.set("#s5leo-armL",{rotation:-20,svgOrigin:"148 338"});
+gsap.set("#s5bia-armR",{rotation:15,svgOrigin:"252 338"});
+gsap.set("#s5bia-armL",{rotation:-15,svgOrigin:"148 338"});
+tl.set("#s5leo-m-smile",{opacity:0},0.28);tl.set("#s5leo-m-grin",{opacity:0},0.28);tl.set("#s5leo-m-open",{opacity:0},0.28);tl.set("#s5leo-m-sad",{opacity:0},0.28);tl.set("#s5leo-m-worried",{opacity:1},0.28);tl.set("#s5leo-m-o",{opacity:0},0.28);tl.set("#s5leo-m-smug",{opacity:0},0.28);
+tl.to("#s5leo-pupils",{x:-10,y:-14,duration:.18,ease:"power2.out"},0.3);
+tl.to("#s5leo-all",{scaleY:.94,scaleX:1.04,svgOrigin:"200 620",duration:.1,ease:"power2.in"},1.7);tl.to("#s5leo-all",{scaleY:1,scaleX:1,svgOrigin:"200 620",duration:.35,ease:"back.out(3)"},1.8);
+tl.set("#s5leo-m-smile",{opacity:0},1.78);tl.set("#s5leo-m-grin",{opacity:0},1.78);tl.set("#s5leo-m-open",{opacity:0},1.78);tl.set("#s5leo-m-sad",{opacity:0},1.78);tl.set("#s5leo-m-worried",{opacity:0},1.78);tl.set("#s5leo-m-o",{opacity:1},1.78);tl.set("#s5leo-m-smug",{opacity:0},1.78);
+tl.to("#s5leo-brows",{y:-14,duration:.2,ease:"power2.out"},1.7);tl.to("#s5leo-browL",{rotation:0,svgOrigin:"160 146",duration:.2},1.7);tl.to("#s5leo-browR",{rotation:0,svgOrigin:"240 146",duration:.2},1.7);
+tl.fromTo("#s5-flood",{scale:0},{scale:1,duration:.5,ease:"power2.inOut",transformOrigin:"50% 50%"},3.0);
+tl.to("#s5leo-all",{scaleY:.94,scaleX:1.04,svgOrigin:"200 620",duration:.1,ease:"power2.in"},3.1);tl.to("#s5leo-all",{scaleY:1,scaleX:1,svgOrigin:"200 620",duration:.35,ease:"back.out(3)"},3.2);
+tl.set("#s5leo-m-smile",{opacity:0},3.18);tl.set("#s5leo-m-grin",{opacity:1},3.18);tl.set("#s5leo-m-open",{opacity:0},3.18);tl.set("#s5leo-m-sad",{opacity:0},3.18);tl.set("#s5leo-m-worried",{opacity:0},3.18);tl.set("#s5leo-m-o",{opacity:0},3.18);tl.set("#s5leo-m-smug",{opacity:0},3.18);
+tl.to("#s5leo-armR",{rotation:-118,svgOrigin:"252 338",duration:0.35,ease:"back.out(1.6)"},3.1);
+tl.to("#s5leo-armL",{rotation:118,svgOrigin:"148 338",duration:0.35,ease:"back.out(1.6)"},3.15);
+tl.fromTo("#s5-bia",{x:-500},{x:0,duration:.5,ease:"expo.out"},3.4);
+tl.to("#s5bia-all",{scaleY:.94,scaleX:1.04,svgOrigin:"200 620",duration:.1,ease:"power2.in"},3.6);tl.to("#s5bia-all",{scaleY:1,scaleX:1,svgOrigin:"200 620",duration:.35,ease:"back.out(3)"},3.7);
+tl.set("#s5bia-m-smile",{opacity:0},3.68);tl.set("#s5bia-m-grin",{opacity:0},3.68);tl.set("#s5bia-m-open",{opacity:0},3.68);tl.set("#s5bia-m-sad",{opacity:0},3.68);tl.set("#s5bia-m-worried",{opacity:0},3.68);tl.set("#s5bia-m-o",{opacity:1},3.68);tl.set("#s5bia-m-smug",{opacity:0},3.68);
+tl.to("#s5bia-brows",{y:-16,duration:.2,ease:"power2.out"},3.6);tl.to("#s5bia-browL",{rotation:0,svgOrigin:"160 146",duration:.2},3.6);tl.to("#s5bia-browR",{rotation:0,svgOrigin:"240 146",duration:.2},3.6);
+tl.fromTo("#s5bia-m-o",{scaleY:1},{scaleY:1.6,svgOrigin:"200 258",duration:.3,ease:"back.out(3)"},3.8);
+tl.fromTo("#s5-pile",{y:500},{y:250,duration:.6,ease:"back.out(1.4)"},6.3);tl.to("#s5-pile",{y:0,duration:.7,ease:"back.out(1.6)"},8.6);
+tl.to("#s5-leo",{y:-50,duration:.6,ease:"back.out(1.4)"},6.3);tl.to("#s5-leo",{y:-110,duration:.7,ease:"back.out(1.6)"},8.6);
+tl.to("#s5-bia",{x:-80,y:60,duration:.5,ease:"power2.out"},8.6);
+tl.to("#s5leo-all",{scaleY:.94,scaleX:1.04,svgOrigin:"200 620",duration:.1,ease:"power2.in"},8.65);tl.to("#s5leo-all",{scaleY:1,scaleX:1,svgOrigin:"200 620",duration:.35,ease:"back.out(3)"},8.75);
+tl.set("#s5leo-m-smile",{opacity:0},8.73);tl.set("#s5leo-m-grin",{opacity:1},8.73);tl.set("#s5leo-m-open",{opacity:0},8.73);tl.set("#s5leo-m-sad",{opacity:0},8.73);tl.set("#s5leo-m-worried",{opacity:0},8.73);tl.set("#s5leo-m-o",{opacity:0},8.73);tl.set("#s5leo-m-smug",{opacity:0},8.73);
+tl.to("#s5leo-pupils",{x:0,y:-4,duration:.18,ease:"power2.out"},8.7);
+tl.to("#s5leo-eyes",{scaleY:.08,svgOrigin:"200 192",duration:.06,yoyo:true,repeat:1,ease:"power1.inOut"},11.5);
+tl.to("#s5bia-eyes",{scaleY:.08,svgOrigin:"200 192",duration:.06,yoyo:true,repeat:1,ease:"power1.inOut"},10.2);
+tl.to("#s5-leo",{y:-170,duration:.22,ease:"power2.out",yoyo:true,repeat:1},11.0);tl.to("#s5-leo",{y:-170,duration:.22,ease:"power2.out",yoyo:true,repeat:1},12.4);
+tl.to("#s5leo-eyes",{scaleY:.08,svgOrigin:"200 192",duration:.06,yoyo:true,repeat:1,ease:"power1.inOut"},13.2);
+tl.fromTo("#virada-cam",{scale:1.06},{scale:1,duration:.5,ease:"expo.out",transformOrigin:"50% 40%"},8.6);
+tl.fromTo("#s5-l1 .w",{color:"#B9B4C6"},{color:"#1E1A2B",duration:.12,stagger:.09,ease:"none"},0.3);
+tl.to("#s5-l1 .in",{opacity:0,filter:"blur(8px)",duration:.18,ease:"power2.in"},1.4);
+tl.fromTo("#s5-l2 .w",{opacity:0,filter:"blur(6px)"},{opacity:1,filter:"blur(0px)",duration:.16,stagger:.07,ease:"power2.out"},3.3);
+tl.to("#s5-l2 .in",{opacity:0,filter:"blur(8px)",duration:.18,ease:"power2.in"},6.1);
+tl.fromTo("#s5-l3 .in",{scale:.6,opacity:0},{scale:1,opacity:1,duration:.45,ease:"back.out(2)"},9);
+
+window.__timelines["virada"] = tl;
+</script>
+</template>

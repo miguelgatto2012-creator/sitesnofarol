@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #FFD447; }
+      #root { width: 100%; height: 100%; font-family: Nunito, sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="66" data-width="1080" data-height="1920">
+      <div id="gancho" data-composition-id="gancho" data-composition-src="compositions/gancho.html"
+        data-start="0" data-duration="6" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="proposta" data-composition-id="proposta" data-composition-src="compositions/proposta.html"
+        data-start="6" data-duration="11" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="escolha" data-composition-id="escolha" data-composition-src="compositions/escolha.html"
+        data-start="17" data-duration="8" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="dias" data-composition-id="dias" data-composition-src="compositions/dias.html"
+        data-start="25" data-duration="16" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="virada" data-composition-id="virada" data-composition-src="compositions/virada.html"
+        data-start="41" data-duration="14" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+      <div id="final" data-composition-id="final" data-composition-src="compositions/final.html"
+        data-start="55" data-duration="11" data-track-index="1" data-track-kind="graphics"
+        data-width="1080" data-height="1920"></div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>
