@@ -88,11 +88,15 @@ footer b{color:#fff}
 .fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #25D366;animation:ping 2.2s infinite}
 @keyframes ping{from{transform:scale(1);opacity:.7}to{transform:scale(1.55);opacity:0}}
 @media(prefers-reduced-motion:reduce){.fab::after,.bub{animation:none}html{scroll-behavior:auto}}
+
+.backbtn{position:fixed;left:16px;bottom:16px;z-index:66;display:inline-flex;align-items:center;gap:8px;background:#0a1733;color:#fff;text-decoration:none;font:700 14px system-ui,-apple-system,"Segoe UI",sans-serif;padding:13px 18px;border-radius:99px;box-shadow:0 10px 24px rgba(0,0,0,.35);border:2px solid #ffc72c}
+.backbtn:hover{background:#163270}
+@media(max-width:639px){.backbtn{padding:13px 16px}}
 </style>
 </head>
 <body>
 
-<div class="demo"><b>Projeto demonstrativo · Plano Essencial</b> — nome, telefone, endereço e preços são fictícios.</div>
+<div class="demo"><a href="index.html#portfolio" style="color:#ffc72c;font-weight:800;text-decoration:underline;white-space:nowrap">← Voltar ao site</a> · <b>Projeto demonstrativo · Plano Essencial</b> — nome, telefone, endereço e preços são fictícios.</div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="paw" viewBox="0 0 48 48">
@@ -270,5 +274,6 @@ footer b{color:#fff}
   });
 })();
 </script>
+<a class="backbtn" href="index.html#portfolio" aria-label="Voltar ao site principal">← Voltar ao site</a>
 </body>
 </html>
