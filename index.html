@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agência Sites no Farol</title>
+<meta name="description" content="Criação de sites para negócios, comércios e empresas. Atendimento preferencialmente online, planos claros e suporte mensal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@600;700;800&family=Nunito:wght@700;800;900&family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Fraunces:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1733;
+  --navy-2:#0f2147;
+  --navy-3:#163270;
+  --card:rgba(255,255,255,.05);
+  --card-hover:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.12);
+  --text:#ffffff;
+  --muted:#b3c0de;
+  --yellow:#ffc72c;
+  --sky:#5ab8ff;
+  --r:26px;
+  --r-sm:18px;
+  --ease:cubic-bezier(.22,.8,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',system-ui,sans-serif;color:var(--text);line-height:1.6;overflow-x:hidden;min-height:100vh;
+  background:
+    radial-gradient(900px 500px at 85% -5%, rgba(90,184,255,.18), transparent 60%),
+    radial-gradient(700px 500px at -10% 35%, rgba(22,50,112,.55), transparent 60%),
+    var(--navy);
+}
+h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.15;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+.yellow{color:var(--yellow)}
+.sky{color:var(--sky)}
+
+/* ---------- Botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 26px;border-radius:999px;font-weight:700;font-size:1rem;font-family:inherit;
+  border:2px solid transparent;cursor:pointer;
+  transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s,color .25s;
+}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{background:var(--yellow);color:var(--navy);box-shadow:0 8px 24px rgba(255,199,44,.25)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(255,199,44,.4);background:#ffd24f}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.03)}
+.btn-ghost:hover{border-color:var(--sky);color:var(--sky);transform:translateY(-3px)}
+
+/* ---------- Navegação (abas) ---------- */
+header{position:fixed;top:14px;left:0;right:0;z-index:50}
+.nav{
+  width:min(1080px,92%);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:8px 8px 8px 24px;border-radius:999px;background:rgba(10,23,51,.6);border:1px solid var(--line);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:background .3s,box-shadow .3s;
+}
+header.scrolled .nav{background:rgba(10,23,51,.92);box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.logo i{width:12px;height:12px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,199,44,.2)}
+.tabs{display:flex;gap:4px}
+.tab{
+  padding:10px 18px;border-radius:999px;color:var(--muted);font-weight:700;font-size:.95rem;
+  transition:background .25s,color .25s;
+}
+.tab:hover{color:var(--text);background:rgba(255,255,255,.08)}
+.tab.active{background:var(--yellow);color:var(--navy)}
+
+/* ---------- Páginas ---------- */
+.page{display:none;padding:120px 0 120px;min-height:100vh}
+.page.show{display:block}
+.head{max-width:620px;margin-bottom:40px}
+.eyebrow{display:inline-block;color:var(--sky);font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+.head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:12px}
+.head p{color:var(--muted);font-size:1.05rem}
+.block{margin-top:90px}
+
+/* ---------- Início: apresentação ---------- */
+.hero{max-width:700px}
+.hero + .block{margin-top:56px}
+.badge{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;margin-bottom:22px;
+  background:rgba(90,184,255,.1);border:1px solid rgba(90,184,255,.3);color:var(--sky);font-weight:500;font-size:.9rem;
+}
+.badge b{width:8px;height:8px;border-radius:50%;background:var(--sky);animation:pulse 1.8s infinite}
+.hero h1{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:800;margin-bottom:16px}
+.word{display:inline-block;color:var(--yellow);transition:opacity .35s,transform .35s var(--ease)}
+.word.out{opacity:0;transform:translateY(12px)}
+.hero p.lead{font-size:1.05rem;color:var(--muted);margin-bottom:10px}
+.hero p.lead strong{color:var(--text)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+
+.me{
+  padding:34px 30px;border-radius:var(--r);text-align:center;
+  background:linear-gradient(165deg,var(--navy-3),var(--navy-2));border:1px solid var(--line);
+  box-shadow:0 30px 70px rgba(0,0,0,.4);animation:float 6s ease-in-out infinite;
+}
+.avatar{
+  width:96px;height:96px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;
+  font-family:'Sora',sans-serif;font-weight:800;font-size:2.4rem;color:var(--navy);
+  background:linear-gradient(135deg,var(--yellow),#ffe08a);box-shadow:0 0 0 8px rgba(255,199,44,.15);
+}
+.me h3{font-size:1.35rem}
+.me .role{color:var(--sky);font-weight:700;font-size:.92rem;margin-bottom:20px}
+.me li{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 16px;margin-top:10px;border-radius:var(--r-sm);background:rgba(255,255,255,.06);font-size:.95rem}
+.me li::before{content:"✓";color:var(--yellow);font-weight:800}
+
+/* ---------- Cartões e etapas ---------- */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  padding:28px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);
+  transition:transform .3s var(--ease),border-color .3s,background .3s;
+}
+.card:hover{transform:translateY(-6px);border-color:var(--sky);background:var(--card-hover)}
+.card .ico{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;font-size:1.5rem;background:rgba(90,184,255,.12);margin-bottom:16px}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:26px 22px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);transition:transform .3s var(--ease),border-color .3s}
+.step:hover{transform:translateY(-6px);border-color:var(--yellow)}
+.num{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;margin-bottom:14px;background:var(--yellow);color:var(--navy);font-family:'Sora',sans-serif;font-weight:800}
+.step h3{font-size:1.05rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.92rem}
+.step a{color:var(--yellow);font-weight:700}
+
+/* ---------- Planos e suporte ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{position:relative;padding:32px 28px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s var(--ease)}
+.plan:hover{transform:translateY(-6px)}
+.plan.pop{border:2px solid var(--yellow);background:linear-gradient(170deg,rgba(255,199,44,.1),var(--card))}
+.plan h3{font-size:1.35rem;margin-bottom:4px}
+.plan .sub{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+.price{font-family:'Sora',sans-serif;font-size:2.1rem;font-weight:800}
+.price small{font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;color:var(--muted)}
+.once{color:var(--sky);font-size:.85rem;margin-bottom:20px}
+.plan ul{margin-bottom:26px}
+.plan li{display:flex;gap:10px;margin-bottom:11px;color:#dfe7fa;font-size:.95rem}
+.plan li::before{content:"✓";color:var(--yellow);font-weight:800;flex:none}
+.plan li.all{font-weight:700;color:var(--text)}
+.plan .btn{margin-top:auto}
+.note{margin-top:22px;color:var(--muted);font-size:.92rem}
+
+.out-box{margin-top:22px;padding:30px;border-radius:var(--r);background:rgba(90,184,255,.07);border:1px dashed rgba(90,184,255,.4)}
+.out-box h3{font-size:1.15rem;margin-bottom:4px}
+.out-box > p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+.out-box ul{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 24px}
+.out-box li{display:flex;gap:10px;color:#dfe7fa;font-size:.95rem}
+.out-box li::before{content:"+";color:var(--sky);font-weight:800}
+
+.cta{margin-top:70px;padding:44px 32px;border-radius:var(--r);text-align:center;background:linear-gradient(165deg,var(--navy-3),var(--navy-2));border:1px solid var(--line)}
+.cta h2{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta p{color:var(--muted);margin-bottom:24px}
+.block + .cta{margin-top:90px}
+
+
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:34px}
+.how div{padding:22px;border-radius:var(--r);background:rgba(90,184,255,.08);border:1px solid rgba(90,184,255,.22)}
+.how b{display:block;font-family:'Sora',sans-serif;color:var(--yellow);font-size:1rem;margin-bottom:6px}
+.how p{color:var(--muted);font-size:.93rem}
+
+/* ---------- Portfólio ---------- */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.proj{border-radius:var(--r);overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .35s var(--ease),border-color .3s}
+.proj:hover{transform:translateY(-8px);border-color:var(--yellow)}
+.thumb{aspect-ratio:16/10;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,var(--navy-3),var(--navy-2));border-bottom:1px solid var(--line)}
+.thumb::before{content:"";position:absolute;inset:16px;border-radius:16px;border:2px dashed rgba(255,255,255,.18)}
+.info{padding:22px}
+.info h3{font-size:1.1rem;margin-bottom:6px}
+.info p{color:var(--text);font-size:.95rem;font-weight:700;margin-bottom:14px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.info .btn{margin-top:18px;width:100%;padding:12px 20px;font-size:.95rem}
+a.thumb{cursor:pointer;transition:filter .3s}
+a.thumb:hover{filter:brightness(1.25)}
+.tags span{font-size:.78rem;padding:4px 12px;border-radius:999px;background:rgba(90,184,255,.12);color:var(--sky);font-weight:700}
+
+
+/* ---------- Prévias dos sites (miniaturas) ---------- */
+.thumb.live{display:block;position:relative;overflow:hidden;background:#000}
+.thumb.live::before{display:none}
+.shot{position:absolute;top:0;left:0;width:900px;height:562px;transform-origin:0 0;overflow:hidden;pointer-events:none;text-align:left;line-height:1.5}
+.shot *{box-sizing:border-box}
+.shot svg{display:block}
+.shot h1{letter-spacing:0}
+.tags span.plan{background:rgba(255,199,44,.16);color:var(--yellow)}
+
+/* Essencial */
+.e{background:#FFF8EE;font-family:Nunito,system-ui,sans-serif;color:#2B1D12}
+.e-demo{background:#4A2F1B;color:#FFE9C7;font-size:13px;text-align:center;padding:7px 12px}
+.e-demo b{color:#fff}
+.e-hd{display:flex;align-items:center;justify-content:space-between;padding:12px 44px;border-bottom:1px solid #EBD9BE}
+.e-brand{display:flex;gap:10px;align-items:center;font-weight:900;font-size:21px;color:#4A2F1B;line-height:1.1}
+.e-brand small{display:block;font-size:11px;font-weight:700;color:#7A6552;letter-spacing:.06em;text-transform:uppercase}
+.e-tel{background:#F7E9D3;border-radius:99px;padding:9px 15px;font-weight:800;font-size:15px;color:#4A2F1B}
+.e-hero{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;padding:34px 44px;align-items:center}
+.e-st{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #EBD9BE;padding:6px 14px;border-radius:99px;font-weight:800;font-size:14px}
+.e-st i{width:9px;height:9px;border-radius:50%;background:#2E9B5B;box-shadow:0 0 0 4px rgba(46,155,91,.18)}
+.e h1{font-family:Nunito,system-ui,sans-serif;font-size:46px;line-height:1.08;margin:14px 0 12px;color:#4A2F1B;font-weight:900}
+.e h1 span{color:#D9741A}
+.e-lead{color:#7A6552;font-size:17px;max-width:40ch}
+.e-btns{display:flex;gap:12px;margin-top:20px}
+.e-b1{background:#F28C28;color:#fff;box-shadow:0 5px 0 #D9741A;border-radius:14px;padding:13px 20px;font-weight:800;font-size:16px}
+.e-b2{border:2px solid #4A2F1B;color:#4A2F1B;border-radius:14px;padding:11px 20px;font-weight:800;font-size:16px}
+.e-art{background:#F7E9D3;border-radius:28px;height:320px;display:grid;place-items:center;position:relative;overflow:hidden}
+.e-art i{position:absolute;border:3px solid #fff;border-radius:50%;opacity:.9}
+.e-fab{position:absolute;right:20px;bottom:20px;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+
+/* Profissional */
+.p{background:#FAFDFC;font-family:Inter,system-ui,sans-serif;color:#12263A}
+.p-demo{background:#12263A;color:#C9E3E0;font-size:13px;text-align:center;padding:7px 12px}
+.p-demo b{color:#fff}
+.p-hd{display:flex;align-items:center;gap:10px;padding:0 36px;height:62px;border-bottom:1px solid #D8E8E5}
+.p-brand{display:flex;gap:10px;align-items:center;font:700 18px/1.05 Poppins,system-ui,sans-serif}
+.p-brand em{font-style:normal;color:#0E8F83}
+.p-brand small{display:block;font:500 11px Inter,sans-serif;color:#5C7080;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+.p-nav{margin-left:auto;display:flex;font-weight:600;font-size:14px}
+.p-nav span{padding:8px 10px}
+.p-cta{background:#FFC83D;color:#12263A;font:700 14px Poppins,system-ui,sans-serif;padding:10px 16px;border-radius:12px;box-shadow:0 3px 0 #F2B01E;margin-left:8px;white-space:nowrap}
+.p-hero{height:472px;background:linear-gradient(135deg,#0E8F83 0%,#0B7A82 60%,#0E5F78 100%);color:#fff;padding:0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;position:relative;overflow:hidden}
+.p-hero::before{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-140px;border-radius:50%;background:rgba(255,255,255,.07)}
+.p-hero>*{position:relative}
+.p-tag{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:600}
+.p h1{font:800 44px/1.08 Poppins,system-ui,sans-serif;margin:16px 0 14px}
+.p h1 mark{background:none;color:#FFC83D}
+.p-lead{font-size:16px;color:#D6F2EE;max-width:44ch}
+.p-btns{display:flex;gap:12px;margin-top:22px}
+.p-b1{background:#FFC83D;color:#12263A;box-shadow:0 5px 0 #F2B01E;font:700 15px Poppins,system-ui,sans-serif;padding:13px 20px;border-radius:14px}
+.p-b2{border:2px solid rgba(255,255,255,.55);color:#fff;font:700 15px Poppins,system-ui,sans-serif;padding:11px 20px;border-radius:14px}
+.p-art{position:relative;height:340px}
+.p-blob{position:absolute;inset:4% 2% 2% 6%;background:rgba(255,255,255,.14);border-radius:46% 54% 52% 48%/52% 44% 56% 48%}
+.p-art svg{position:absolute;filter:drop-shadow(0 14px 18px rgba(0,0,0,.2))}
+.p-dog{width:62%;left:2%;bottom:6%;color:#E7B27A}
+.p-cat{width:48%;right:0;top:4%;color:#F4F1EA}
+.p-fab{position:absolute;right:20px;bottom:20px;display:flex;gap:10px;align-items:center;background:#25D366;color:#fff;font:700 15px Poppins,system-ui,sans-serif;border-radius:99px;padding:13px 20px 13px 15px;box-shadow:0 12px 26px rgba(0,0,0,.28)}
+
+/* Designer */
+.d{background:#0F2A25;font-family:Manrope,system-ui,sans-serif;color:#F7F2E8}
+.d-demo{background:#000;color:#BFD2CC;font-size:13px;text-align:center;padding:7px 12px}
+.d-demo b{color:#fff}
+.d-hd{display:flex;align-items:center;gap:10px;padding:0 36px;height:64px;background:#F7F2E8;color:#0F2A25;border-bottom:1px solid rgba(15,42,37,.14)}
+.d-brand{display:flex;gap:10px;align-items:center;font:600 22px/1.2 Fraunces,Georgia,serif}
+.d-brand small{display:block;font:700 10px Manrope,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#5E7770;margin-top:-2px}
+.d-nav{margin-left:auto;display:flex;font-weight:600;font-size:13.5px}
+.d-nav span{padding:8px 10px}
+.d-cta{background:#0F2A25;color:#F7F2E8;font-weight:700;font-size:14px;padding:11px 18px;border-radius:99px;margin-left:6px;white-space:nowrap}
+.d-hero{height:470px;background:radial-gradient(120% 90% at 80% 20%,#1D4A40 0%,#0F2A25 50%,#0A1F1B 100%);padding:0 40px;display:grid;grid-template-columns:1.15fr .85fr;gap:10px;align-items:center;position:relative;overflow:hidden}
+.d-hero>*{position:relative}
+.d-star{position:absolute;width:3px;height:3px;border-radius:50%;background:#FFF3CF;opacity:.6}
+.d-eye{display:flex;align-items:center;gap:10px;font:700 11.5px Manrope,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#E3B75A}
+.d-eye::before{content:"";width:28px;height:1.5px;background:currentColor}
+.d h1{font:400 44px/1.04 Fraunces,Georgia,serif;margin:16px 0 16px;white-space:nowrap}
+.d h1 span{display:block}
+.d h1 em{color:#E3B75A}
+.d-lead{font-size:16px;color:#BCD3CC;max-width:44ch}
+.d-btns{display:flex;gap:12px;margin-top:22px}
+.d-b1{background:#D8764A;color:#fff;box-shadow:0 10px 24px -10px #BF6038;font-weight:700;font-size:15px;padding:14px 24px;border-radius:99px}
+.d-b2{border:1.5px solid rgba(247,242,232,.4);color:#F7F2E8;font-weight:700;font-size:15px;padding:13px 24px;border-radius:99px}
+.d-stats{display:flex;gap:30px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(247,242,232,.14)}
+.d-stats b{display:block;font:500 32px/1.1 Fraunces,Georgia,serif}
+.d-stats span{font-size:12.5px;color:#8FB0A7}
+.d-fab{position:absolute;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+
+/* ---------- Contato ---------- */
+.contact{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.c-card{padding:34px 30px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s var(--ease),border-color .3s}
+.c-card:hover{transform:translateY(-6px);border-color:var(--yellow)}
+.c-card .ico{width:56px;height:56px;border-radius:20px;display:grid;place-items:center;font-size:1.6rem;background:rgba(255,199,44,.14);margin-bottom:16px}
+.c-card h3{font-size:1.3rem;margin-bottom:6px}
+.c-card .val{color:var(--text);font-weight:700;margin-bottom:6px;word-break:break-word}
+.c-card p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.c-card .row{margin-top:auto;display:flex;flex-wrap:wrap;gap:10px}
+
+/* ---------- WhatsApp fixo ---------- */
+.wa-float{
+  position:fixed;right:18px;bottom:18px;z-index:60;display:flex;align-items:center;gap:10px;
+  padding:14px 22px;border-radius:999px;background:var(--yellow);color:var(--navy);font-weight:700;
+  box-shadow:0 12px 30px rgba(0,0,0,.45);transition:transform .25s var(--ease);
+}
+.wa-float:hover{transform:translateY(-3px) scale(1.04)}
+.wa-float svg{width:24px;height:24px}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:999px;border:2px solid var(--yellow);animation:ring 2.2s infinite;pointer-events:none}
+
+
+.slogan{position:relative;margin-top:56px;padding:56px 24px;border-radius:var(--r);text-align:center;overflow:hidden;
+  background:linear-gradient(165deg,var(--navy-3),var(--navy-2));border:1px solid var(--line)}
+.slogan p{position:relative;font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.5rem,4vw,2.5rem);letter-spacing:-.02em;color:var(--yellow)}
+.slogan .beam{position:absolute;left:50%;top:50%;width:520px;height:520px;margin:-260px 0 0 -260px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,199,44,.13),transparent 62%);animation:glow 4s ease-in-out infinite}
+@keyframes glow{0%,100%{transform:scale(.85);opacity:.6}50%{transform:scale(1.1);opacity:1}}
+
+footer{margin-top:80px;padding-top:28px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+/* ---------- Animações ---------- */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+@keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.35);opacity:0}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1000px){
+  .tab{padding:10px 14px;font-size:.9rem}
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .me{max-width:420px;margin:10px auto 0}
+  .cards3,.plans,.grid,.how{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .out-box ul{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav{padding:6px}
+  .logo{display:none}
+  .tabs{width:100%;gap:2px}
+  .tab{flex:1;text-align:center;padding:10px 2px;font-size:.78rem}
+  .page{padding:110px 0 110px}
+  .block,.block + .cta{margin-top:64px}
+  .steps,.contact{grid-template-columns:1fr}
+  .slogan{padding:44px 18px}
+  .wa-float{padding:14px 18px}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="nav">
+    <a href="#inicio" class="logo"><i></i><span data-brand>Agência Sites no Farol</span></a>
+    <div class="tabs" id="tabs">
+      <a href="#inicio" class="tab" data-page="inicio">Início</a>
+      <a href="#suporte" class="tab" data-page="suporte">Suporte</a>
+      <a href="#planos" class="tab" data-page="planos">Planos</a>
+      <a href="#portfolio" class="tab" data-page="portfolio">Portfólio</a>
+      <a href="#contato" class="tab" data-page="contato">Contato</a>
+    </div>
+  </nav>
+</header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="s-paw" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#F28C28"/><ellipse cx="24" cy="31" rx="9" ry="7.5" fill="#fff"/><ellipse cx="13.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(-18 13.5 22)"/><ellipse cx="34.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(18 34.5 22)"/><ellipse cx="19.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(-6 19.5 15.5)"/><ellipse cx="28.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(6 28.5 15.5)"/></symbol>
+  <symbol id="s-logo" viewBox="0 0 48 48"><rect width="48" height="48" rx="15" fill="#0E8F83"/><ellipse cx="24" cy="31" rx="9" ry="7.5" fill="#FFC83D"/><ellipse cx="13.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(-18 13.5 22)"/><ellipse cx="34.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(18 34.5 22)"/><ellipse cx="19.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(-6 19.5 15.5)"/><ellipse cx="28.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(6 28.5 15.5)"/></symbol>
+  <symbol id="s-moon" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#0F2A25"/><path d="M30 10a15 15 0 1 0 8 26 12 12 0 0 1-8-26z" fill="#E3B75A"/><circle cx="33" cy="17" r="1.6" fill="#E3B75A"/><circle cx="37" cy="24" r="1" fill="#E3B75A"/></symbol>
+  <symbol id="s-wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3.2A12.7 12.7 0 0 0 5 22.3L3.2 28.8l6.7-1.7A12.7 12.7 0 1 0 16 3.2zm0 2.3a10.4 10.4 0 1 1-5.3 19.4l-.4-.2-3.9 1 1-3.8-.3-.4A10.4 10.4 0 0 1 16 5.5zm-3.6 4.6c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.4 3.6 1.6 3.9c.2.2 2.6 4.2 6.5 5.7 3.2 1.3 3.9 1 4.6.9.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7l-1.2-3c-.3-.7-.6-.6-.9-.6z"/></symbol>
+  <symbol id="s-dog" viewBox="0 0 120 120"><ellipse cx="20" cy="52" rx="13" ry="26" transform="rotate(14 20 52)" fill="currentColor"/><ellipse cx="20" cy="52" rx="13" ry="26" transform="rotate(14 20 52)" fill="#000" opacity=".2"/><ellipse cx="100" cy="52" rx="13" ry="26" transform="rotate(-14 100 52)" fill="currentColor"/><ellipse cx="100" cy="52" rx="13" ry="26" transform="rotate(-14 100 52)" fill="#000" opacity=".2"/><circle cx="60" cy="62" r="38" fill="currentColor"/><ellipse cx="60" cy="78" rx="21" ry="16" fill="#fff" opacity=".88"/><ellipse cx="60" cy="69" rx="7" ry="5" fill="#2b2b2b"/><path d="M60 74v6M60 80q-6 6-12 1M60 80q6 6 12 1" fill="none" stroke="#2b2b2b" stroke-width="2.4" stroke-linecap="round"/><circle cx="46" cy="55" r="4.6" fill="#2b2b2b"/><circle cx="74" cy="55" r="4.6" fill="#2b2b2b"/><circle cx="47.6" cy="53.4" r="1.5" fill="#fff"/><circle cx="75.6" cy="53.4" r="1.5" fill="#fff"/></symbol>
+  <symbol id="s-cat" viewBox="0 0 120 120"><path d="M22 60L20 14l36 22z" fill="currentColor"/><path d="M98 60l2-46-36 22z" fill="currentColor"/><path d="M28 46l-1-19 16 10z" fill="#F7A8B8"/><path d="M92 46l1-19-16 10z" fill="#F7A8B8"/><ellipse cx="60" cy="68" rx="40" ry="35" fill="currentColor"/><ellipse cx="45" cy="62" rx="5.5" ry="7" fill="#fff"/><ellipse cx="75" cy="62" rx="5.5" ry="7" fill="#fff"/><ellipse cx="45" cy="62.5" rx="2" ry="5.4" fill="#2b2b2b"/><ellipse cx="75" cy="62.5" rx="2" ry="5.4" fill="#2b2b2b"/><path d="M55 75h10l-5 6z" fill="#F7A8B8"/><path d="M60 81q-5 6-11 2M60 81q5 6 11 2" fill="none" stroke="#2b2b2b" stroke-width="2.2" stroke-linecap="round"/><path d="M12 70l22 4M12 80l22-2M108 70l-22 4M108 80l-22-2" stroke="#fff" stroke-width="1.8" opacity=".85" stroke-linecap="round"/></symbol>
+</svg>
+
+<main>
+
+  <!-- ===================== ABA: INÍCIO (HUB) ===================== -->
+  <div class="page" id="p-inicio">
+    <div class="wrap">
+
+      <div class="hero">
+        <div>
+          <span class="badge reveal"><b></b> Sites para negócios, comércios e empresas</span>
+          <h1 class="reveal" style="--d:.08s">Um site para o seu <span class="word" id="word">negócio</span> ser mais visto e vender mais</h1>
+          <p class="lead reveal" style="--d:.16s">A <strong data-brand>Agência Sites no Farol</strong> cria sites simples, bonitos e fáceis de usar. Com presença na internet, mais clientes encontram a sua empresa e, consequentemente, suas vendas crescem.</p>
+          <p class="lead reveal" style="--d:.2s">Nosso atendimento é <strong>preferencialmente online</strong>: conversamos pelo WhatsApp ou via e-mail, de forma rápida e prática.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="head reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Quatro passos, <span class="yellow">preferencialmente online</span></h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="num">1</div><h3>Conversa</h3><p>Você nos conta sobre o seu negócio e o que precisa, pelo WhatsApp.</p></div>
+          <div class="step reveal" style="--d:.08s"><div class="num">2</div><h3>Plano</h3><p>Escolhemos o <a href="#planos">plano</a> que cabe no seu momento e combinamos prazo e valor.</p></div>
+          <div class="step reveal" style="--d:.16s"><div class="num">3</div><h3>Criação</h3><p>Nós montamos o site e mostramos para você. Você pede os ajustes até ficar do seu jeito.</p></div>
+          <div class="step reveal" style="--d:.24s"><div class="num">4</div><h3>No ar</h3><p>O site é publicado e, se quiser, continuamos cuidando dele com o <a href="#suporte">suporte mensal</a>.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== ABA: PLANOS ===================== -->
+  <div class="page" id="p-planos">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Planos</span>
+        <h2>Escolha o <span class="yellow">tamanho do seu site</span></h2>
+        <p>Pagamento único pela criação do site. Cada plano inclui tudo o que o anterior tem.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Essencial</h3><p class="sub">Para começar com o pé direito.</p>
+          <div class="price">R$ 599,90</div><div class="once">pagamento único</div>
+          <ul>
+            <li>Página única, responsiva, design simples, nome e logo</li>
+            <li>Catálogo digital de serviços e preços (banho, tosa, consulta, vacinas)</li>
+            <li>Botão de WhatsApp, horários de cada dia e telefone</li>
+            <li>Mapa de localização e links do Instagram</li>
+          </ul>
+          <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no plano Essencial (R$ 599,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Essencial</a>
+        </article>
+
+        <article class="plan pop reveal" style="--d:.1s">
+          <h3>Profissional</h3><p class="sub">Mais visual e mais completo.</p>
+          <div class="price">R$ 999,90</div><div class="once">pagamento único</div>
+          <ul>
+            <li class="all">Tudo do Essencial</li>
+            <li>Design completo, interativo, nas cores da marca</li>
+            <li>Galeria de fotos (pets, antes e depois da tosa)</li>
+            <li>Avaliações do Google e depoimentos</li>
+            <li>Agendamento de banho e tosa que chega pelo WhatsApp</li>
+            <li>Delivery de ração (WhatsApp ou iFood)</li>
+            <li>Página da equipe, perguntas frequentes e Google Meu Negócio</li>
+          </ul>
+          <a class="btn btn-primary" data-msg="Olá! Tenho interesse no plano Profissional (R$ 999,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Profissional</a>
+        </article>
+
+        <article class="plan reveal" style="--d:.2s">
+          <h3>Designer</h3><p class="sub">O mais completo, com identidade própria.</p>
+          <div class="price">R$ 1.699,90</div><div class="once">pagamento único</div>
+          <ul>
+            <li class="all">Tudo do Profissional</li>
+            <li>Animações e identidade visual própria</li>
+            <li>Painel para o dono editar preços e fotos sozinho</li>
+            <li>Agendamento online com dia e horário</li>
+            <li>Catálogo de produtos com pedido pelo WhatsApp</li>
+            <li>Ficha do pet com lembrete de vacina e retorno</li>
+            <li>Página de adoção, blog de dicas e história da empresa</li>
+          </ul>
+          <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no plano Designer (R$ 1.699,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Designer</a>
+        </article>
+      </div>
+      <p class="note reveal">Domínio e hospedagem não estão incluídos e são orçados à parte.</p>
+    </div>
+  </div>
+
+  <!-- ===================== ABA: SUPORTE ===================== -->
+  <div class="page" id="p-suporte">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Suporte mensal</span>
+        <h2>Seu site <span class="yellow">sempre funcionando</span></h2>
+        <p>Opcional. Depois que o site está no ar, nós continuamos cuidando dele. Cada nível inclui tudo o que o anterior tem.</p>
+      </div>
+      <div class="how reveal">
+        <div><b>1 · Você chama</b><p>Pelo WhatsApp, em horário comercial, sempre que precisar de uma correção ou alteração.</p></div>
+        <div><b>2 · Nós resolvemos</b><p>Atendemos dentro do prazo do seu nível de suporte, de 1 a 3 dias úteis.</p></div>
+        <div><b>3 · Mensalidade fixa</b><p>Você paga um valor fixo por mês. O que está fora do suporte é orçado à parte.</p></div>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Simples</h3><p class="sub">O básico para ficar tranquilo.</p>
+          <div class="price">R$ 49,90<small> /mês</small></div><div class="once">cobrança mensal</div>
+          <ul>
+            <li>Correção de bugs e erros</li>
+            <li>Verificação de que o site está no ar</li>
+            <li>Backup mensal</li>
+            <li>WhatsApp em horário comercial</li>
+            <li>Resposta no máximo em 3 dias úteis</li>
+          </ul>
+          <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no suporte Simples (R$ 49,90/mês). Podemos conversar?" target="_blank" rel="noopener">Quero o Simples</a>
+        </article>
+
+        <article class="plan pop reveal" style="--d:.1s">
+          <h3>Especial</h3><p class="sub">Para manter o site sempre atualizado.</p>
+          <div class="price">R$ 89,90<small> /mês</small></div><div class="once">cobrança mensal</div>
+          <ul>
+            <li class="all">Tudo do Simples</li>
+            <li>Até 4 alterações simples por mês (preço, foto, texto, horário, promoção)</li>
+            <li>Atualização da galeria de fotos</li>
+            <li>Resposta em até 2 dias úteis</li>
+          </ul>
+          <a class="btn btn-primary" data-msg="Olá! Tenho interesse no suporte Especial (R$ 89,90/mês). Podemos conversar?" target="_blank" rel="noopener">Quero o Especial</a>
+        </article>
+
+        <article class="plan reveal" style="--d:.2s">
+          <h3>Suporte Premium</h3><p class="sub">Prioridade e acompanhamento.</p>
+          <div class="price">R$ 159,90<small> /mês</small></div><div class="once">cobrança mensal</div>
+          <ul>
+            <li class="all">Tudo do Especial</li>
+            <li>Alterações simples ilimitadas e maior número de alterações grandes (nova seção, ajuste de layout)</li>
+            <li>Prioridade, com resposta em até 1 dia útil</li>
+            <li>Relatório mensal simples de acessos</li>
+          </ul>
+          <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no Suporte Premium (R$ 159,90/mês). Podemos conversar?" target="_blank" rel="noopener">Quero o Premium</a>
+        </article>
+      </div>
+
+      <div class="out-box reveal">
+        <h3>Fora do suporte</h3>
+        <p>Estes itens são orçados à parte:</p>
+        <ul>
+          <li>Recursos novos grandes, como agendamento online ou painel</li>
+          <li>Redesign completo</li>
+          <li>Anúncios e tráfego pago</li>
+          <li>Domínio e hospedagem</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABA: PORTFÓLIO ===================== -->
+  <div class="page" id="p-portfolio">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Portfólio</span>
+        <h2>Veja como fica <span class="yellow">cada plano</span></h2>
+        <p>Sites de demonstração, um para cada plano, com dados fictícios. Toque em um deles para navegar como se fosse o seu cliente.</p>
+      </div>
+      <div class="grid">
+        <article class="proj reveal">
+          <a class="thumb live" href="https://claude.ai/artifact/HkCpAXwJ77Biwe9fBYi3Fn" target="_blank" rel="noopener" aria-label="Ver demonstração: Focinho Feliz"><div class="shot e" aria-hidden="true">
+            <div class="e-demo"><b>Projeto demonstrativo · Plano Essencial</b> — nome, telefone, endereço e preços são fictícios.</div>
+            <div class="e-hd"><div class="e-brand"><svg width="40" height="40"><use href="#s-paw"/></svg><span>Focinho Feliz<small>Pet Shop</small></span></div><div class="e-tel">(24) 90000-0000</div></div>
+            <div class="e-hero">
+              <div>
+                <span class="e-st"><i></i>Aberto agora</span>
+                <h1>Banho, tosa e muito <span>carinho</span> para o seu melhor amigo.</h1>
+                <p class="e-lead">Atendimento com hora marcada, produtos de qualidade e uma equipe que trata o seu pet como parte da família.</p>
+                <div class="e-btns"><span class="e-b1">Chamar no WhatsApp</span><span class="e-b2">Ver preços</span></div>
+              </div>
+              <div class="e-art">
+                <i style="width:34px;height:34px;left:12%;top:14%"></i><i style="width:20px;height:20px;right:16%;top:22%"></i><i style="width:44px;height:44px;right:10%;bottom:14%"></i><i style="width:16px;height:16px;left:18%;bottom:22%"></i>
+                <svg width="230" height="230" viewBox="0 0 200 200"><ellipse cx="38" cy="96" rx="22" ry="40" fill="#8B5A2B" transform="rotate(14 38 96)"/><ellipse cx="162" cy="96" rx="22" ry="40" fill="#8B5A2B" transform="rotate(-14 162 96)"/><circle cx="100" cy="102" r="64" fill="#E9B97A"/><ellipse cx="100" cy="132" rx="36" ry="27" fill="#FFF3DF"/><ellipse cx="100" cy="116" rx="12" ry="8.5" fill="#3B2A1D"/><circle cx="76" cy="92" r="7" fill="#3B2A1D"/><circle cx="124" cy="92" r="7" fill="#3B2A1D"/><circle cx="78" cy="90" r="2.2" fill="#fff"/><circle cx="126" cy="90" r="2.2" fill="#fff"/><path d="M100 124v9M100 133q-9 8-18 1M100 133q9 8 18 1" fill="none" stroke="#3B2A1D" stroke-width="3" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <div class="e-fab"><svg width="30" height="30"><use href="#s-wa"/></svg></div>
+          </div></a>
+          <div class="info">
+            <h3>Focinho Feliz</h3>
+            <p>Pet shop</p>
+            <div class="tags"><span>Demonstração</span><span class="plan">Plano Essencial</span></div>
+            <a class="btn btn-primary" href="https://claude.ai/artifact/HkCpAXwJ77Biwe9fBYi3Fn" target="_blank" rel="noopener">Ver demonstração</a>
+          </div>
+        </article>
+        <article class="proj reveal" style="--d:0.08s">
+          <a class="thumb live" href="https://claude.ai/artifact/NnTrkmtThnP1eeKgdUEXBR" target="_blank" rel="noopener" aria-label="Ver demonstração: Pelos &amp; Penas Pet Center"><div class="shot p" aria-hidden="true">
+            <div class="p-demo"><b>Projeto demonstrativo · Plano Profissional</b> — nome, contatos, avaliações, equipe e fotos ilustrativas são fictícios.</div>
+            <div class="p-hd"><div class="p-brand"><svg width="36" height="36"><use href="#s-logo"/></svg><span>Pelos <em>&amp;</em> Penas<small>Pet Center</small></span></div><div class="p-nav"><span>Serviços</span><span>Galeria</span><span>Agendar</span><span>Delivery</span><span>Equipe</span></div><div class="p-cta">Agendar banho</div></div>
+            <div class="p-hero">
+              <div>
+                <span class="p-tag">⭐ 4,9 no Google · +3.000 pets atendidos</span>
+                <h1>Seu pet <mark>cheiroso</mark>, feliz e bem cuidado.</h1>
+                <p class="p-lead">Banho, tosa, consultas veterinárias e delivery de ração em um só lugar. Agende em 1 minuto e a gente confirma pelo WhatsApp.</p>
+                <div class="p-btns"><span class="p-b1">Agendar banho e tosa</span><span class="p-b2">Pedir ração</span></div>
+              </div>
+              <div class="p-art"><div class="p-blob"></div><svg class="p-dog" viewBox="0 0 120 120"><use href="#s-dog" width="120" height="120"/></svg><svg class="p-cat" viewBox="0 0 120 120"><use href="#s-cat" width="120" height="120"/></svg></div>
+            </div>
+            <div class="p-fab"><svg width="26" height="26"><use href="#s-wa"/></svg>WhatsApp</div>
+          </div></a>
+          <div class="info">
+            <h3>Pelos &amp; Penas Pet Center</h3>
+            <p>Pet shop</p>
+            <div class="tags"><span>Demonstração</span><span class="plan">Plano Profissional</span></div>
+            <a class="btn btn-primary" href="https://claude.ai/artifact/NnTrkmtThnP1eeKgdUEXBR" target="_blank" rel="noopener">Ver demonstração</a>
+          </div>
+        </article>
+        <article class="proj reveal" style="--d:0.16s">
+          <a class="thumb live" href="https://claude.ai/artifact/SQrmX5PYKEMgStYkNNEzic" target="_blank" rel="noopener" aria-label="Ver demonstração: Clínica Veterinária Dona Lua"><div class="shot d" aria-hidden="true">
+            <div class="d-demo"><b>Projeto demonstrativo · Plano Designer</b> — clínica, nomes, contatos, preços e avaliações são fictícios.</div>
+            <div class="d-hd"><div class="d-brand"><svg width="34" height="34"><use href="#s-moon"/></svg><span>Dona Lua<small>Clínica Veterinária</small></span></div><div class="d-nav"><span>História</span><span>Serviços</span><span>Agendar</span><span>Ficha do pet</span><span>Loja</span></div><div class="d-cta">Agendar consulta</div></div>
+            <div class="d-hero">
+              <i class="d-star" style="left:6%;top:12%"></i><i class="d-star" style="left:18%;top:40%"></i><i class="d-star" style="left:30%;top:8%"></i><i class="d-star" style="left:44%;top:26%"></i><i class="d-star" style="left:52%;top:10%"></i><i class="d-star" style="left:60%;top:34%"></i><i class="d-star" style="left:70%;top:14%"></i><i class="d-star" style="left:78%;top:6%"></i><i class="d-star" style="left:86%;top:30%"></i><i class="d-star" style="left:92%;top:18%"></i><i class="d-star" style="left:12%;top:70%"></i><i class="d-star" style="left:40%;top:86%"></i><i class="d-star" style="left:64%;top:80%"></i><i class="d-star" style="left:88%;top:74%"></i><i class="d-star" style="left:96%;top:52%"></i>
+              <div>
+                <span class="d-eye">Clínica veterinária · Petrópolis</span>
+                <h1><span>Medicina veterinária</span><span>com <em>tempo, escuta</em></span><span>e carinho.</span></h1>
+                <p class="d-lead">Consultas sem pressa, exames no mesmo lugar e plantão 24 horas. Cuidamos do seu pet como se ele fosse da nossa casa.</p>
+                <div class="d-btns"><span class="d-b1">Agendar consulta</span><span class="d-b2">Conhecer a clínica</span></div>
+                <div class="d-stats"><div><b>15</b><span>anos cuidando</span></div><div><b>4.800+</b><span>pets atendidos</span></div><div><b>24h</b><span>plantão de emergência</span></div></div>
+              </div>
+              <svg viewBox="0 0 400 360" width="360" height="324"><defs><radialGradient id="s-mg" cx="40%" cy="35%"><stop offset="0" stop-color="#FFF3CF"/><stop offset="1" stop-color="#E3B75A"/></radialGradient></defs><circle cx="200" cy="150" r="124" fill="url(#s-mg)"/><circle cx="160" cy="112" r="20" fill="#D9A945" opacity=".35"/><circle cx="238" cy="178" r="28" fill="#D9A945" opacity=".28"/><circle cx="210" cy="86" r="11" fill="#D9A945" opacity=".3"/><circle cx="146" cy="194" r="13" fill="#D9A945" opacity=".3"/><path d="M0 360V300Q120 262 200 290T400 276V360Z" fill="#0A1F1B"/><g fill="#071714"><ellipse cx="200" cy="262" rx="30" ry="36"/><circle cx="200" cy="216" r="22"/><path d="M182 204l-6-22 18 10zM218 204l6-22-18 10z"/><path d="M228 278q34-6 30-40" fill="none" stroke="#071714" stroke-width="9" stroke-linecap="round"/></g></svg>
+            </div>
+            <div class="d-fab"><svg width="30" height="30"><use href="#s-wa"/></svg></div>
+          </div></a>
+          <div class="info">
+            <h3>Clínica Veterinária Dona Lua</h3>
+            <p>Clínica veterinária</p>
+            <div class="tags"><span>Demonstração</span><span class="plan">Plano Designer</span></div>
+            <a class="btn btn-primary" href="https://claude.ai/artifact/SQrmX5PYKEMgStYkNNEzic" target="_blank" rel="noopener">Ver demonstração</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== ABA: CONTATO ===================== -->
+  <div class="page" id="p-contato">
+    <div class="wrap">
+      <div class="head reveal">
+        <span class="eyebrow">Contato</span>
+        <h2>Fale conosco <span class="yellow">por onde preferir</span></h2>
+        <p>Nosso atendimento é preferencialmente online. Chame a gente que respondemos o mais rápido possível.</p>
+      </div>
+      <div class="contact">
+        <div class="c-card reveal">
+          <div class="ico">💬</div>
+          <h3>WhatsApp</h3>
+          <div class="val" id="waText">(24) 99295-5563</div>
+          <p>O jeito mais rápido de falar com a gente.</p>
+          <div class="row"><a class="btn btn-primary" data-wa target="_blank" rel="noopener">Abrir conversa</a></div>
+        </div>
+        <div class="c-card reveal" style="--d:.1s">
+          <div class="ico">✉️</div>
+          <h3>E-mail</h3>
+          <div class="val" id="mailText">agencia.sitesnofarol@gmail.com</div>
+          <p>Para quem prefere escrever com calma.</p>
+          <div class="row">
+            <a class="btn btn-ghost" id="mailLink" href="#contato">Enviar e-mail</a>
+            <button class="btn btn-ghost" id="copyMail" type="button">Copiar endereço</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="slogan reveal">
+        <span class="beam" aria-hidden="true"></span>
+        <p>Ilumine seu negócio na internet</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <footer>© <span id="year"></span> <span data-brand>Agência Sites no Farol</span>. Todos os direitos reservados.</footer>
+  </div>
+</main>
+
+<a class="wa-float" data-wa target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* ====== TROQUE AQUI SEUS DADOS ====== */
+const CONFIG = {
+  nome: "Agência Sites no Farol",
+  whatsapp: "5524992955563",          // só números: 55 + DDD + número
+  whatsappExibir: "(24) 99295-5563",
+  email: "agencia.sitesnofarol@gmail.com"
+};
+/* ==================================== */
+
+document.documentElement.classList.add('js');
+const $ = (s, el=document) => el.querySelector(s);
+const $$ = (s, el=document) => [...el.querySelectorAll(s)];
+
+// Dados de contato
+$$('[data-brand]').forEach(e => e.textContent = CONFIG.nome);
+$('#waText').textContent = CONFIG.whatsappExibir;
+$('#mailText').textContent = CONFIG.email;
+$('#year').textContent = new Date().getFullYear();
+const wa = t => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(t)}`;
+const waMsg = 'Olá! Vi o seu site e gostaria de conversar sobre um site para o meu negócio.';
+$$('[data-wa]').forEach(a => a.href = wa(waMsg));
+$$('[data-msg]').forEach(a => a.href = wa(a.dataset.msg));
+$('#mailLink').href = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Site para o meu negócio')}`;
+
+$('#copyMail').addEventListener('click', async e => {
+  const btn = e.currentTarget, old = btn.textContent;
+  try { await navigator.clipboard.writeText(CONFIG.email); btn.textContent = 'Copiado ✓'; }
+  catch { const r = document.createRange(); r.selectNodeContents($('#mailText')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selecionado'; }
+  setTimeout(() => btn.textContent = old, 1800);
+});
+
+
+// Palavra rotativa
+const words = ['negócio','comércio'];
+let wi = 0; const w = $('#word');
+setInterval(() => {
+  w.classList.add('out');
+  setTimeout(() => { wi = (wi + 1) % words.length; w.textContent = words[wi]; w.classList.remove('out'); }, 350);
+}, 2600);
+
+// Animação de entrada
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+
+// Abas (rota pelo hash)
+const pages = ['inicio','suporte','planos','portfolio','contato'];
+function show(){
+  let id = location.hash.replace('#','');
+  if(!pages.includes(id)) id = 'inicio';
+  pages.forEach(p => {
+    $('#p-' + p).classList.toggle('show', p === id);
+    $(`.tab[data-page="${p}"]`).classList.toggle('active', p === id);
+  });
+  $$('#p-' + id + ' .reveal').forEach(el => { el.classList.remove('in'); io.unobserve(el); io.observe(el); });
+  scrollTo({top:0, behavior:'auto'});
+}
+addEventListener('hashchange', show);
+show();
+
+
+// Miniaturas do portfólio: encolhe o site de 900px para caber na caixinha
+const fit = new ResizeObserver(es => es.forEach(e => {
+  const t = e.target, w = t.clientWidth;
+  if(w) t.firstElementChild.style.transform = `scale(${w / 900})`;
+}));
+$$('.thumb.live').forEach(t => fit.observe(t));
+
+addEventListener('scroll', () => $('header').classList.toggle('scrolled', scrollY > 20), {passive:true});
+</script>
+</body>
+</html>
