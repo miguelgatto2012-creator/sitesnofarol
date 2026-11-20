@@ -399,10 +399,12 @@ footer{margin-top:80px;padding-top:28px;border-top:1px solid var(--line);color:v
           <h3>Essencial</h3><p class="sub">Para começar com o pé direito.</p>
           <div class="price">R$ 599,90</div><div class="once">pagamento único</div>
           <ul>
-            <li>Página única, responsiva, design simples, nome e logo</li>
-            <li>Catálogo digital de serviços e preços (banho, tosa, consulta, vacinas)</li>
-            <li>Botão de WhatsApp, horários de cada dia e telefone</li>
-            <li>Mapa de localização e links do Instagram</li>
+            <li>Site de uma página, responsivo, com design simples, nome e logo</li>
+            <li>Catálogo digital de serviços ou produtos com preços (cardápio, tabela de serviços, lista de produtos)</li>
+            <li>Botão flutuante de WhatsApp</li>
+            <li>Horários de funcionamento e telefone</li>
+            <li>Localização com mapa do Google</li>
+            <li>Links do Instagram e outras redes</li>
           </ul>
           <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no plano Essencial (R$ 599,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Essencial</a>
         </article>
@@ -412,12 +414,13 @@ footer{margin-top:80px;padding-top:28px;border-top:1px solid var(--line);color:v
           <div class="price">R$ 999,90</div><div class="once">pagamento único</div>
           <ul>
             <li class="all">Tudo do Essencial</li>
-            <li>Design completo, interativo, nas cores da marca</li>
-            <li>Galeria de fotos (pets, antes e depois da tosa)</li>
-            <li>Avaliações do Google e depoimentos</li>
-            <li>Agendamento de banho e tosa que chega pelo WhatsApp</li>
-            <li>Delivery de ração (WhatsApp ou iFood)</li>
-            <li>Página da equipe, perguntas frequentes e Google Meu Negócio</li>
+            <li>Design completo e interativo, nas cores da marca</li>
+            <li>Galeria de fotos (produtos, trabalhos feitos, o espaço)</li>
+            <li>Avaliações e depoimentos de clientes</li>
+            <li>Formulário de contato, pedido ou orçamento que chega pelo WhatsApp</li>
+            <li>Páginas extras: sobre, equipe e serviços</li>
+            <li>Perguntas frequentes</li>
+            <li>Google Meu Negócio e SEO básico para aparecer nas buscas</li>
           </ul>
           <a class="btn btn-primary" data-msg="Olá! Tenho interesse no plano Profissional (R$ 999,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Profissional</a>
         </article>
@@ -427,12 +430,13 @@ footer{margin-top:80px;padding-top:28px;border-top:1px solid var(--line);color:v
           <div class="price">R$ 1.699,90</div><div class="once">pagamento único</div>
           <ul>
             <li class="all">Tudo do Profissional</li>
-            <li>Animações e identidade visual própria</li>
-            <li>Painel para o dono editar preços e fotos sozinho</li>
-            <li>Agendamento online com dia e horário</li>
-            <li>Catálogo de produtos com pedido pelo WhatsApp</li>
-            <li>Ficha do pet com lembrete de vacina e retorno</li>
-            <li>Página de adoção, blog de dicas e história da empresa</li>
+            <li>Animações e identidade visual personalizada</li>
+            <li>Painel para o dono editar preços, fotos e textos sozinho</li>
+            <li>Agendamento ou reserva online</li>
+            <li>Catálogo com carrinho ou pedido pelo WhatsApp</li>
+            <li>Blog ou área de novidades e promoções</li>
+            <li>Integrações (feed do Instagram, delivery como iFood, Google Analytics)</li>
+            <li>História da empresa, diferenciais e toque especial</li>
           </ul>
           <a class="btn btn-ghost" data-msg="Olá! Tenho interesse no plano Designer (R$ 1.699,90). Podemos conversar?" target="_blank" rel="noopener">Quero o Designer</a>
         </article>
@@ -694,6 +698,16 @@ function show(){
   scrollTo({top:0, behavior:'auto'});
 }
 addEventListener('hashchange', show);
+addEventListener('pageshow', show);
+// Cliques nos links internos (abas, "plano", etc.): troca a aba direto, sem depender só do hashchange
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const id = a.getAttribute('href').slice(1);
+  if(!pages.includes(id)) return;
+  e.preventDefault();
+  if(location.hash !== '#' + id) location.hash = id; else show();
+});
 show();
 
 
