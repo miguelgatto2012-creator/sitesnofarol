@@ -491,6 +491,34 @@ for (const s of S) {
         data-width="${W}" data-height="${H}"></div>\n`;
   t += s.D;
 }
+// ---------- áudio: narração (Kokoro local) + efeitos (biblioteca Pixabay da HyperFrames) ----------
+import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+const dur = (f) => r2(Math.floor(parseFloat(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString()) * 100) / 100);
+const narr = JSON.parse(readFileSync("tools/narracao.json", "utf8"));
+// [arquivo, momento visual (s), pico do arquivo (s), volume]; início = visual + 1 quadro - pico
+const PEAK = { pop: .12, sparkle: .027, whoosh: .162, riser: 3.472, "impact-bass-1": .073, "click-soft": .073, chime: .418 };
+const VOL = { pop: 1.15, sparkle: .28, whoosh: .5, riser: .17, "impact-bass-1": .27, "click-soft": 1.1, chime: 2.0 };
+const fx = [
+  ["pop", 2.45], ["sparkle", 2.6], ["whoosh", 5.95],
+  ["pop", 10.0], ["sparkle", 13.5], ["pop", 19.3], ["pop", 22.0], ["pop", 22.12, .8], ["pop", 22.24, .95],
+  ...[0, .9, 1.6, 2.15, 2.6, 2.95, 3.25, 3.5, 3.75, 4.0, 7.4, 7.6, 7.8, 8.0, 8.2, 8.4, 8.6, 8.8, 9.0, 9.25, 12, 12.25, 12.5, 12.75, 13]
+    .map((t, i) => ["click-soft", 25 + t, i % 2 ? .7 : 1.1]),
+  ...[0, 1.6, 3.0, 6.3].map((t) => ["click-soft", 41 + t]),
+  ["whoosh", 44.0], ["riser", 49.6], ["impact-bass-1", 49.6], ["pop", 50.0],
+  ["whoosh", 55.0], ["chime", 61.6],
+];
+let audio = "";
+narr.forEach(([id, t]) => {
+  audio += `      <audio id="vo-${id}" class="clip" src="assets/voice/${id}.wav" data-start="${t}" data-duration="${dur(`assets/voice/${id}.wav`)}" data-track-index="5" data-volume="1"></audio>\n`;
+});
+const laneEnd = [];
+fx.forEach(([f, t, v], i) => {
+  const start = Math.max(0, r2(t + 1 / 30 - PEAK[f]));
+  const d = Math.min(dur(`assets/sfx/${f}.mp3`), r2(66 - start));
+  let lane = laneEnd.findIndex((e) => e <= start); if (lane < 0) lane = laneEnd.length; laneEnd[lane] = start + d;
+  audio += `      <audio id="sfx-${String(i).padStart(2, "0")}-${f}" class="clip" src="assets/sfx/${f}.mp3" data-start="${start}" data-duration="${d}" data-track-index="${6 + lane}" data-volume="${v ?? VOL[f]}"></audio>\n`;
+});
 const index = `<!doctype html>
 <html lang="pt-BR">
   <head>
@@ -505,7 +533,7 @@ const index = `<!doctype html>
   </head>
   <body>
     <div id="root" data-composition-id="main" data-start="0" data-duration="${t}" data-width="${W}" data-height="${H}">
-${hosts}    </div>
+${hosts}${audio}    </div>
     <script>
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = gsap.timeline({ paused: true });

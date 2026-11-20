@@ -1,4 +1,14 @@
-# REVIEW — O centavo que dobrava (v1)
+# REVIEW — O centavo que dobrava (v2: com áudio)
+
+## Áudio (v2)
+- Narração: Kokoro local, voz `pm_alex` em pt-BR, 21 falas (`tools/narracao.json`, gerar com
+  `tools/tts.sh`), normalizada a -16 LUFS / -1.5 dBTP. A tela não repete a fala palavra por palavra.
+- Efeitos: biblioteca da HyperFrames (Pixabay Content License): pop, sparkle, whoosh, cliques do
+  calendário, riser + impacto no dia 30, chime no final. Cada pico cai 1 quadro depois da imagem.
+- Sem música de fundo: o gerador local (MusicGen) não está instalado e o catálogo exige login HeyGen.
+- O som foi medido, não ouvido.
+
+# v1
 
 ## Decisões criativas
 - Construída a storyline A (STORYLINES.md). Não construídas: B "a formiga que levantou um carro",
