@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Focinho Feliz Pet Shop — Plano Essencial (projeto demonstrativo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--or:#F28C28;--or2:#D9741A;--brown:#4A2F1B;--cream:#FFF8EE;--sand:#F7E9D3;--ink:#2B1D12;--mut:#7A6552;--line:#EBD9BE;--ok:#2E9B5B;--bad:#C0432F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.wrap{width:min(960px,100% - 32px);margin-inline:auto}
+
+.demo{background:var(--brown);color:#FFE9C7;font-size:12.5px;text-align:center;padding:7px 12px;line-height:1.35}
+.demo b{color:#fff}
+
+header.top{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:19px;color:var(--brown);line-height:1.1}
+.brand svg{width:40px;height:40px;flex:none}
+.brand small{display:block;font-weight:700;font-size:11px;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
+.tel{font-weight:800;text-decoration:none;color:var(--brown);font-size:14px;display:flex;align-items:center;gap:6px;background:var(--sand);padding:8px 12px;border-radius:999px;white-space:nowrap}
+.tel svg{width:16px;height:16px}
+
+.hero{padding:26px 0 14px}
+.hero .wrap{display:grid;gap:18px;align-items:center}
+@media(min-width:760px){.hero .wrap{grid-template-columns:1.15fr .85fr}}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13.5px;background:#fff;border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(46,155,91,.18)}
+.dot.off{background:var(--bad);box-shadow:0 0 0 4px rgba(192,67,47,.16)}
+h1{font-size:clamp(31px,7vw,47px);line-height:1.08;margin:14px 0 10px;color:var(--brown);font-weight:900;letter-spacing:-.01em}
+h1 span{color:var(--or2)}
+.lead{color:var(--mut);font-size:17px;max-width:46ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px;border:2px solid transparent;cursor:pointer;font-family:inherit;line-height:1.2}
+.btn.main{background:var(--or);color:#fff;box-shadow:0 5px 0 var(--or2)}
+.btn.main:active{transform:translateY(3px);box-shadow:0 2px 0 var(--or2)}
+.btn.line{border-color:var(--brown);color:var(--brown);background:transparent}
+.btn svg{width:18px;height:18px}
+.art{background:var(--sand);border-radius:28px;padding:20px;display:grid;place-items:center;position:relative;overflow:hidden}
+.art svg.dog{width:min(250px,72%);height:auto;position:relative}
+.bub{position:absolute;border:3px solid #fff;border-radius:50%;opacity:.9;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+section{padding:30px 0}
+h2{font-size:clamp(25px,5vw,31px);color:var(--brown);font-weight:900;line-height:1.15}
+.sub{color:var(--mut);margin-top:4px}
+
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.chip{border:2px solid var(--line);background:#fff;color:var(--brown);font:800 14px Nunito,sans-serif;padding:8px 15px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--brown);border-color:var(--brown);color:#fff}
+.list{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.item{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px dashed var(--line)}
+.item:last-child{border-bottom:0}
+.item .ic{width:38px;height:38px;border-radius:12px;background:var(--sand);display:grid;place-items:center;font-size:20px;flex:none}
+.item .n{font-weight:800;line-height:1.25}
+.item small{display:block;color:var(--mut);font-weight:600;font-size:13px}
+.item .p{margin-left:auto;font-weight:900;color:var(--or2);white-space:nowrap;font-size:17px;padding-left:6px}
+.item[hidden]{display:none}
+.note{font-size:13px;color:var(--mut);margin-top:10px}
+
+.two{display:grid;gap:16px;margin-top:16px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:9px 12px;border-radius:10px;font-weight:700}
+.hours li.today{background:var(--sand);color:var(--brown);font-weight:900}
+.hours li.today::after{content:"hoje";font-size:11px;background:var(--or);color:#fff;border-radius:99px;padding:1px 8px;margin-left:8px;align-self:center}
+.hours li span:last-child{margin-left:auto}
+.map{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#F2E6D0}
+.map svg{display:block;width:100%;height:auto}
+.addr{margin-top:12px;font-weight:700}
+.addr small{display:block;color:var(--mut);font-weight:600}
+
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.social a{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;background:#fff;border:1px solid var(--line);padding:10px 16px;border-radius:14px}
+.social svg{width:20px;height:20px}
+
+footer{background:var(--brown);color:#F3DDBF;padding:26px 0 96px;margin-top:30px;font-size:14px}
+footer b{color:#fff}
+
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25);text-decoration:none}
+.fab svg{width:30px;height:30px}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #25D366;animation:ping 2.2s infinite}
+@keyframes ping{from{transform:scale(1);opacity:.7}to{transform:scale(1.55);opacity:0}}
+@media(prefers-reduced-motion:reduce){.fab::after,.bub{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="demo"><b>Projeto demonstrativo · Plano Essencial</b> — nome, telefone, endereço e preços são fictícios.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="paw" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="24" fill="#F28C28"/>
+    <ellipse cx="24" cy="31" rx="9" ry="7.5" fill="#fff"/>
+    <ellipse cx="13.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(-18 13.5 22)"/>
+    <ellipse cx="34.5" cy="22" rx="3.6" ry="4.6" fill="#fff" transform="rotate(18 34.5 22)"/>
+    <ellipse cx="19.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(-6 19.5 15.5)"/>
+    <ellipse cx="28.5" cy="15.5" rx="3.4" ry="4.6" fill="#fff" transform="rotate(6 28.5 15.5)"/>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 32 32">
+    <path fill="#fff" d="M16 3.2A12.7 12.7 0 0 0 5 22.3L3.2 28.8l6.7-1.7A12.7 12.7 0 1 0 16 3.2zm0 2.3a10.4 10.4 0 1 1-5.3 19.4l-.4-.2-3.9 1 1-3.8-.3-.4A10.4 10.4 0 0 1 16 5.5zm-3.6 4.6c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.4 3.6 1.6 3.9c.2.2 2.6 4.2 6.5 5.7 3.2 1.3 3.9 1 4.6.9.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.4-.3-.8-.5-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.3 1.6-.2.3-.5.3-.9.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7l-1.2-3c-.3-.7-.6-.6-.9-.6z"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#topo"><svg><use href="#paw"/></svg><span>Focinho Feliz<small>Pet Shop</small></span></a>
+    <a class="tel" href="tel:+5524900000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(24) 90000-0000</a>
+  </div>
+</header>
+
+<main id="topo">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="status"><i class="dot" id="dot"></i><span id="stxt">Verificando horário…</span></span>
+      <h1>Banho, tosa e muito <span>carinho</span> para o seu melhor amigo.</h1>
+      <p class="lead">Atendimento com hora marcada, produtos de qualidade e uma equipe que trata o seu pet como parte da família.</p>
+      <div class="btns">
+        <a class="btn main" href="https://wa.me/5524900000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20banho." target="_blank" rel="noopener"><svg viewBox="0 0 32 32"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        <a class="btn line" href="#precos">Ver preços</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <span class="bub" style="width:34px;height:34px;left:12%;top:14%"></span>
+      <span class="bub" style="width:20px;height:20px;right:16%;top:22%;animation-delay:-2s"></span>
+      <span class="bub" style="width:44px;height:44px;right:10%;bottom:14%;animation-delay:-1s"></span>
+      <span class="bub" style="width:16px;height:16px;left:18%;bottom:22%;animation-delay:-3s"></span>
+      <svg class="dog" viewBox="0 0 200 200">
+        <ellipse cx="38" cy="96" rx="22" ry="40" fill="#8B5A2B" transform="rotate(14 38 96)"/>
+        <ellipse cx="162" cy="96" rx="22" ry="40" fill="#8B5A2B" transform="rotate(-14 162 96)"/>
+        <circle cx="100" cy="102" r="64" fill="#E9B97A"/>
+        <ellipse cx="100" cy="132" rx="36" ry="27" fill="#FFF3DF"/>
+        <ellipse cx="100" cy="116" rx="12" ry="8.5" fill="#3B2A1D"/>
+        <path d="M100 124v9M100 133q-10 10-20 2M100 133q10 10 20 2" fill="none" stroke="#3B2A1D" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M91 141q9 20 18 0z" fill="#F0697A"/>
+        <circle cx="74" cy="92" r="8" fill="#2B1D12"/><circle cx="126" cy="92" r="8" fill="#2B1D12"/>
+        <circle cx="77" cy="89" r="2.6" fill="#fff"/><circle cx="129" cy="89" r="2.6" fill="#fff"/>
+        <path d="M60 76q12-9 24-2M116 74q12-7 24 2" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="precos">
+  <div class="wrap">
+    <h2>Nossos serviços e preços</h2>
+    <p class="sub">Catálogo digital sempre atualizado. Toque para filtrar.</p>
+    <div class="chips" role="group" aria-label="Filtrar serviços">
+      <button class="chip" data-f="all" aria-pressed="true">Todos</button>
+      <button class="chip" data-f="banho" aria-pressed="false">Banho e tosa</button>
+      <button class="chip" data-f="extra" aria-pressed="false">Extras</button>
+      <button class="chip" data-f="saude" aria-pressed="false">Saúde</button>
+    </div>
+    <div class="list" id="list">
+      <div class="item" data-c="banho"><span class="ic">🛁</span><div><div class="n">Banho — porte pequeno</div><small>Até 8 kg · shampoo e secagem</small></div><span class="p">R$ 45</span></div>
+      <div class="item" data-c="banho"><span class="ic">🛁</span><div><div class="n">Banho — porte médio</div><small>De 9 a 20 kg</small></div><span class="p">R$ 60</span></div>
+      <div class="item" data-c="banho"><span class="ic">🛁</span><div><div class="n">Banho — porte grande</div><small>Acima de 20 kg</small></div><span class="p">R$ 80</span></div>
+      <div class="item" data-c="banho"><span class="ic">✂️</span><div><div class="n">Tosa higiênica</div><small>Patinhas, barriga e região íntima</small></div><span class="p">R$ 30</span></div>
+      <div class="item" data-c="banho"><span class="ic">✂️</span><div><div class="n">Banho + tosa completa</div><small>Pequeno porte · máquina ou tesoura</small></div><span class="p">R$ 85</span></div>
+      <div class="item" data-c="extra"><span class="ic">💧</span><div><div class="n">Hidratação de pelos</div><small>Pelo macio e brilhante</small></div><span class="p">R$ 25</span></div>
+      <div class="item" data-c="extra"><span class="ic">🦷</span><div><div class="n">Escovação de dentes</div><small>Hálito fresquinho</small></div><span class="p">R$ 20</span></div>
+      <div class="item" data-c="extra"><span class="ic">🐾</span><div><div class="n">Corte de unhas</div><small>Rápido e sem estresse</small></div><span class="p">R$ 15</span></div>
+      <div class="item" data-c="saude"><span class="ic">🩺</span><div><div class="n">Consulta veterinária</div><small>Com hora marcada</small></div><span class="p">R$ 120</span></div>
+      <div class="item" data-c="saude"><span class="ic">💉</span><div><div class="n">Vacina V10</div><small>Dose aplicada pelo veterinário</small></div><span class="p">R$ 90</span></div>
+      <div class="item" data-c="saude"><span class="ic">💊</span><div><div class="n">Vermifugação</div><small>Conforme o peso do pet</small></div><span class="p">R$ 35</span></div>
+    </div>
+    <p class="note">Valores de exemplo. Preços podem variar conforme porte, pelagem e temperamento do pet.</p>
+  </div>
+</section>
+
+<section id="horarios">
+  <div class="wrap">
+    <h2>Horários e localização</h2>
+    <div class="two">
+      <div class="card">
+        <ul class="hours" id="hours"></ul>
+      </div>
+      <div class="card">
+        <div class="map" role="img" aria-label="Mapa ilustrativo da localização">
+          <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <rect width="400" height="250" fill="#F2E6D0"/>
+            <rect x="262" y="22" width="112" height="78" rx="14" fill="#CFE5B8"/>
+            <rect x="20" y="150" width="90" height="80" rx="10" fill="#E9D8BA"/>
+            <g stroke="#fff" stroke-linecap="round" fill="none">
+              <path d="M-10 118H410" stroke-width="22"/>
+              <path d="M150-10V260" stroke-width="18"/>
+              <path d="M250 118L330 260" stroke-width="12"/>
+              <path d="M-10 40H150" stroke-width="10"/>
+              <path d="M150 190H410" stroke-width="10"/>
+            </g>
+            <g fill="#D7C3A0" font-family="Nunito,sans-serif" font-size="11" font-weight="800">
+              <text x="196" y="122">Rua das Palmeiras</text>
+              <text x="34" y="44">Av. Central</text>
+            </g>
+            <g transform="translate(150 112)">
+              <ellipse cx="0" cy="22" rx="12" ry="4" fill="rgba(0,0,0,.18)"/>
+              <path d="M0 22C-18 2-20-2-20-12a20 20 0 0 1 40 0c0 10-2 14-20 34z" fill="#F28C28"/>
+              <circle cx="0" cy="-12" r="8" fill="#fff"/>
+            </g>
+          </svg>
+        </div>
+        <p class="addr">Rua das Palmeiras, 123 — Centro<small>Petrópolis / RJ · CEP 25600-000 (endereço fictício)</small></p>
+        <div class="btns" style="margin-top:12px">
+          <a class="btn main" href="https://www.google.com/maps/search/?api=1&query=Petr%C3%B3polis+RJ+pet+shop" target="_blank" rel="noopener">Como chegar</a>
+        </div>
+        <p class="note">No site real, o mapa do Google aparece aqui, com o endereço exato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="redes">
+  <div class="wrap">
+    <h2>Siga a gente</h2>
+    <p class="sub">Fotos dos pets atendidos, promoções e novidades.</p>
+    <div class="social">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#C13584" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="#C13584"/></svg>@focinhofeliz.petshop</a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#1877F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Focinho Feliz</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>Focinho Feliz Pet Shop</b> · (24) 90000-0000 · Rua das Palmeiras, 123 — Centro</p>
+    <p style="margin-top:6px;opacity:.8">© 2026 Focinho Feliz. Site demonstrativo — Plano Essencial.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/5524900000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var H=[[9,13],[8,18],[8,18],[8,18],[8,18],[8,18],[8,17]];
+  var D=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+  var now=new Date(),today=now.getDay();
+
+  var ul=document.getElementById('hours');
+  [1,2,3,4,5,6,0].forEach(function(k){
+    var li=document.createElement('li');
+    if(k===today)li.className='today';
+    li.innerHTML='<span>'+D[k]+'</span><span>'+H[k][0]+'h às '+H[k][1]+'h</span>';
+    ul.appendChild(li);
+  });
+
+  var h=now.getHours()+now.getMinutes()/60,a=H[today][0],b=H[today][1];
+  var dot=document.getElementById('dot'),tx=document.getElementById('stxt');
+  if(h>=a&&h<b){tx.textContent='Aberto agora · fecha às '+b+'h'}
+  else{
+    dot.className='dot off';
+    if(h<a){tx.textContent='Fechado agora · abre hoje às '+a+'h'}
+    else{var n=(today+1)%7;tx.textContent='Fechado agora · abre amanhã às '+H[n][0]+'h'}
+  }
+
+  var chips=document.querySelectorAll('.chip'),items=document.querySelectorAll('#list .item');
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+      var f=c.getAttribute('data-f');
+      items.forEach(function(i){i.hidden=!(f==='all'||i.getAttribute('data-c')===f)});
+    });
+  });
+})();
+</script>
+</body>
+</html>
